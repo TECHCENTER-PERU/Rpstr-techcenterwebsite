@@ -11,10 +11,8 @@ module.exports = function (config) {
       require('@angular-devkit/build-angular/plugins/karma')
     ],
     client: {
-      jasmine: {
-        // Puedes agregar configuraciones de Jasmine aquí si lo necesitas
-      },
-      clearContext: false // dejar los resultados visibles en la consola
+      jasmine: {},
+      clearContext: false
     },
     coverageReporter: {
       dir: require('path').join(__dirname, './coverage'),
@@ -26,7 +24,18 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['ChromeHeadless'], // 👈 Esto es lo importante
+    customLaunchers: {
+      ChromeHeadlessCI: {
+        base: 'ChromeHeadless',
+        flags: [
+          '--no-sandbox',
+          '--disable-gpu',
+          '--disable-dev-shm-usage',
+          '--disable-setuid-sandbox'
+        ]
+      }
+    },
+    browsers: ['ChromeHeadlessCI'], // 👈 Usa esta versión robusta
     singleRun: false,
     restartOnFileChange: true
   });
