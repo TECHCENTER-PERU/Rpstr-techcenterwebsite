@@ -36,7 +36,7 @@ module.exports = function (config) {
       }
     },
     browsers: ['ChromeHeadlessCI'], // 👈 Usa esta versión robusta
-    singleRun: false,
+    singleRun: true,
     restartOnFileChange: true
   });
 };
