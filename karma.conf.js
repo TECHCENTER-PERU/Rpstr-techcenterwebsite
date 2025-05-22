@@ -35,8 +35,13 @@ module.exports = function (config) {
         ]
       }
     },
+<<<<<<< HEAD
     browsers: ['ChromeHeadlessCI'], // 👈 Usa esta versión robusta
     singleRun: true,
+=======
+    browsers: ['ChromeHeadless'], // 👈 Usa esta versión robusta
+    singleRun: false,
+>>>>>>> ee33d6a700477f085b097f52b99e9e50a1f72bc9
     restartOnFileChange: true
   });
 };
