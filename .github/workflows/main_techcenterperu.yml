@@ -26,8 +26,15 @@ jobs:
       - name: Start Xvfb
         run: Xvfb :99 -screen 0 1280x1024x24 &
 
+      - name: Check Xvfb process
+        run: |
+          ps aux | grep Xvfb
+
       - name: Set display environment variable
         run: echo "DISPLAY=:99" >> $GITHUB_ENV
+
+      - name: Display Environment Variable
+        run: echo $DISPLAY
 
       - name: npm install, build, and test
         run: |
