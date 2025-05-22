@@ -26,20 +26,21 @@ jobs:
       - name: Start Xvfb
         run: Xvfb :99 -screen 0 1280x1024x24 &
 
+      - name: Check Xvfb process
+        run: |
+          ps aux | grep Xvfb
+
       - name: Set display environment variable
         run: echo "DISPLAY=:99" >> $GITHUB_ENV
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Display Environment Variable
+        run: echo $DISPLAY
 
-      - name: Install Angular CLI globally
-        run: npm install -g @angular/cli
-
-      - name: Build project
-        run: npm run build
-
-      - name: Run unit tests
-        run: ng test web-techcenter --browsers=ChromeHeadlessCI --watch=false --no-progress
+      - name: npm install, build, and test
+        run: |
+          npm install
+          npm run build --if-present
+          npm run test --if-present
 
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
