@@ -1,4 +1,3 @@
-// karma.conf.js
 module.exports = function (config) {
   config.set({
     basePath: '',
@@ -36,6 +35,6 @@ module.exports = function (config) {
       }
     },
     browsers: ['ChromeHeadlessCI'], // 👈 Usa esta versión robusta
-    singleRun: true
+    singleRun: true // Ejecuta las pruebas solo una vez y termina el proceso
   });
 };
