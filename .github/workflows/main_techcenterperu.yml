@@ -60,5 +60,5 @@ jobs:
         with:
           app-name: 'techcenterperu'
           slot-name: 'Production'
-          package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F0A3C9073BDB466590AE9C8139348D68 }}
+          package: .
