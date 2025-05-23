@@ -5,29 +5,31 @@
     <p>En un entorno empresarial que cambia rápidamente, TECHCENTER y Microsoft te brindan las herramientas y la estrategia necesarias para superar desafíos, acelerar la innovación y liderar el cambio digital. </p>
     <div class="header-buttons">
       <a routerLink="/contacto" class="btn primary">Obtén una asesoría gratuita</a>
-      <a routerLink="/servicios" class="btn secondary">Conoce más Soluciones</a>
+      <a routerLink="/servicios" class="btn secondary">Conoce más soluciones</a>
     </div>
   </div>
 </header>
 
 <!-- Soluciones Container -->
-<section class="soluciones-container">
-  <div class="soluciones-header">
-    <div class="soluciones-icon"></div>
-    <div class="soluciones-text">
+<section class="section-container section-container--pt-80">
+  <div class="section-header section-header--p-80">
+    <div class="icon">
+      <img src="assets/img/formas/forma-1.png" alt="">
+    </div>
+    <div class="section-text">
       <h4>Soluciones</h4>
       <h2>Microsoft Cloud</h2>
       <p>Impulsa tu transformación digital con Azure, Microsoft 365 y Power Platform. Escala tu negocio con tecnología segura, flexible y de alto impacto. </p>
     </div>
   </div>
-  <div class="soluciones-grid">
+  <div class="section-grid grid-3">
     <div class="card"> 
       <h3>Trabajo moderno</h3> 
       <p>Implementa soluciones como Microsoft Teams y SharePoint para facilitar el trabajo híbrido, mejorar la colaboración y aumentar la productividad.</p>
     </div>
     <div class="card"> 
       <h3>Aplicaciones empresariales</h3> 
-      <p>Create custom software tailored for your unique needs, including front-end and core back-end technology.</p>
+      <p>Digitaliza tus procesos con Dynamics 365 y Power Apps, integrando automatización y análisis en tiempo real.</p>
     </div>
     <div class="card"> 
       <h3>Infraestructura </h3> 
@@ -48,30 +50,267 @@
   </div>
 </section>
 
-<section class="servicios-container">
-    <div class="servicios-header">
-        <div class="servicios-text">
+<section class="section-container section-container--pt-20">
+    <div class="section-header section-header--p-80">
+    <div class="icon">
+      <img src="assets/img/formas/forma-1.png" alt="">
+    </div>
+        <div class="section-text">
             <h4>Servicios</h4>
             <h2>Lleva tu empresa al siguiente nivel</h2>
             <p>Combinamos la tecnología de Microsoft Cloud con nuestros servicios de consultoría para ofrecerte una solución integral que se adapta a tus necesidades específicas. Desde la planificación y estrategia hasta la implementación y soporte, estamos contigo en cada paso del camino.</p>
         </div>
     </div>
-    <div class="servicios-grid">
-        <div class="card"> 
-      <h3>Migración a la nube</h3> 
-      <p>Facilitamos la transición de tus aplicaciones y datos a la nube de Microsoft de manera segura y eficiente, minimizando cualquier interrupción en tus operaciones.</p>
-    </div>
-    <div class="card"> 
-      <h3>Modernización de aplicaciones</h3> 
-      <p>Ayudamos a tu empresa a desarrollar nuevas aplicaciones en la nube o a modernizar las existentes para aprovechar las capacidades avanzadas de la nube de Microsoft</p>
-    </div>
-    <div class="card"> 
-      <h3>Consultoría y asesoramiento</h3> 
-      <p>Transformación Digital e Innovación con nuestra Consultoría en Transformación Digital. Te ayudamos a identificar las aplicaciones y servicios de Microsoft ideales para tu empresa.</p>
-    </div>
-    <div class="card"> 
-      <h3>Capacitación y soporte</h3> 
-      <p>Ayudamos a tu empresa con la formación continua y el soporte técnico para asegurar que puedas utilizar las soluciones de Microsoft de manera efectiva.</p>
-    </div>
+    <div class="section-grid grid-2">
+      <div class="card"> 
+        <h3>Migración a la nube</h3> 
+        <p>Facilitamos la transición de tus aplicaciones y datos a la nube de Microsoft de manera segura y eficiente, minimizando cualquier interrupción en tus operaciones.</p>
+      </div>
+      <div class="card"> 
+        <h3>Modernización de aplicaciones</h3> 
+        <p>Ayudamos a tu empresa a desarrollar nuevas aplicaciones en la nube o a modernizar las existentes para aprovechar las capacidades avanzadas de la nube de Microsoft</p>
+      </div>
+      <div class="card"> 
+        <h3>Consultoría y asesoramiento</h3> 
+        <p>Transformación Digital e Innovación con nuestra Consultoría en Transformación Digital. Te ayudamos a identificar las aplicaciones y servicios de Microsoft ideales para tu empresa.</p>
+      </div>
+      <div class="card"> 
+        <h3>Capacitación y soporte</h3> 
+        <p>Ayudamos a tu empresa con la formación continua y el soporte técnico para asegurar que puedas utilizar las soluciones de Microsoft de manera efectiva.</p>
+      </div>
     </div>
 </section>
+
+<section class="section-container--clr-f7f7fd">
+  <div class="section-text centered">
+      <h3>Historias que inspiran</h3>
+   <div class="clientes-grid">
+      <div class="carousel">
+        <div class="carousel-item" *ngFor="let logo of logos">
+          <img [src]="logo.src" [alt]="logo.alt">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-container section-container--pt-8">
+  <div class="section-header section-header--p-80">
+    <div class="experiencia-icon">
+      <img src="assets/img/formas/forma-2.png" class="custom custom-back" alt="">
+      <img src="assets/img/section-clients.png" class="custom-shape custom-front" alt="">
+    </div>
+    <div class="section-text">
+      <h3>Nuestros Clientes</h3>
+      <p>Nos enorgullece seguir ayudando a impulsar la transformación digital e innovación de numerosas empresas a nivel nacional e internacional en diversos sectores empresariales como: Finanzas, Minería, Transporte, Tecnología de la Información y Comunicaciones, Educación, Industria, Comercio, Servicios, Gobierno, entre otros.</p>  
+    </div>
+  </div>
+   <div class="section-grid grid-3">
+      <div class="card">
+        <div class="card-calificacion">
+          <img src="assets/img/formas/stars.png" alt="">
+        </div> 
+        <div class="card-text">
+          <p>"Facilitamos la transición de tus aplicaciones y datos a la nube de Microsoft de manera segura y eficiente, minimizando cualquier interrupción en tus operaciones."</p>
+        </div>
+        <div class="card-footer">
+          <div class="logo">
+            <img src="assets/img/formas/forma-1.png" alt="">
+          </div>
+          <div class="texto">
+            <h3>RAUL SALDAÑA</h3>
+            <p>Gerente de TI - DANPER</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-calificacion">
+          <img src="assets/img/formas/stars.png" alt="">
+        </div> 
+        <div class="card-text">
+          <p>"TECHCENTER optimizó nuestra productividad con Office 365, mejorando la seguridad de la información y facilitando el acceso y colaboración eficiente en toda la empresa."</p>
+        </div>
+        <div class="card-footer">
+          <div class="logo">
+            <img src="assets/img/formas/forma-1.png" alt="">
+          </div>
+          <div class="texto">
+            <h3>SERGIO MORALES</h3>
+            <p>Director - FARM IMPORT</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-calificacion">
+          <img src="assets/img/formas/stars.png" alt="">
+        </div> 
+        <div class="card-text">
+          <p>"TECHCENTER ha entendido nuestras necesidades únicas desde el inicio, facilitando un flujo de información ágil y decisiones mejor informadas en nuestra empresa."</p>
+        </div>
+        <div class="card-footer">
+          <div class="logo">
+            <img src="assets/img/formas/forma-1.png" alt="">
+          </div>
+          <div class="texto">
+            <h3>RAUL SALDAÑA</h3>
+            <p>Gerente General - ETRAL</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section-container section-container--pt-80">
+  <div class="section-header section-header--p-80">
+    <div class="novedades-icon">
+      <img src="assets/img/formas/forma-1.png" alt="">
+    </div>
+    <div class="section-text">
+      <h3>Ultimas Novedades</h3>
+      <p>Descubre cómo la tecnología Microsoft Cloud te ayuda a enfrentar los desafíos de tu empresa en un mundo de rápida evolución.</p>  
+    </div>
+  </div>
+   <div class="section-grid grid-3">
+      <div class="card">
+        <div class="card-calificacion">
+          <img src="assets/img/formas/stars.png" alt="">
+        </div> 
+        <div class="card-text">
+          <h3>Cómo las Empresas de Software Lideran la Transformación de la IA</h3>
+          <p>"Facilitamos la transición de tus aplicaciones y datos a la nube de Microsoft de manera segura y eficiente, minimizando cualquier interrupción en tus operaciones."</p>
+        </div>
+        <button>Leer mas</button>
+      </div>
+      <div class="card">
+        <div class="card-calificacion">
+          <img src="assets/img/formas/stars.png" alt="">
+        </div> 
+        <div class="card-text">
+          <h3>Optimiza tu negocio con Agentes IA en Microsoft Dynamics 365</h3>
+          <p>"TECHCENTER optimizó nuestra productividad con Office 365, mejorando la seguridad de la información y facilitando el acceso y colaboración eficiente en toda la empresa."</p>
+        </div>
+        <button>Leer mas</button>
+
+      </div>
+      <div class="card">
+        <div class="card-calificacion">
+          <img src="assets/img/formas/stars.png" alt="">
+        </div> 
+        <div class="card-text">
+          <h3>Empodera tu negocio con IA: Descubre el Chat de Microsoft 365 Copilot</h3>
+          <p>Empodera tu negocio con IA: Descubre el Chat de Microsoft 365 Copilot</p>
+        </div>
+        <button>Leer mas</button>
+      </div>
+    </div>
+</section>
+
+<section class="section-container section-container--pt-20">
+  <div class="section-header section-header--p-0">
+    <div class="section-text centered">
+      <h3>Preguntas frecuentes</h3>
+      <p>Encuentra respuestas a las preguntas más frecuentes sobre nuestras soluciones.</p>  
+    </div>
+  </div>
+     <div class="section-grid">
+        <div class="faq-columns">
+          <div class="faq-column">
+            <details>
+              <summary>¿Qué es la transformación digital y por qué es importante para mi empresa?</summary>
+              <p>La transformación digital implica la integración de tecnologías digitales en todas las áreas de tu negocio, cambiando fundamentalmente cómo operas y entregas valor a los clientes. Es importante porque mejora la eficiencia operativa, reduce costos, y permite una mejor toma de decisiones basada en datos. Además, te ayuda a adaptarte rápidamente a los cambios del mercado y a mantener una ventaja competitiva.</p>
+            </details>
+            
+            <details>
+              <summary>¿Cómo puede TECHCENTER ayudar a mi empresa con la transformación digital?</summary>
+              <p>En TECHCENTER, ofrecemos servicios de consultoría personalizados para guiar a tu empresa en su viaje de transformación digital. Utilizamos tecnologías avanzadas de Microsoft Cloud para optimizar tus procesos, mejorar la experiencia del cliente y fomentar la innovación. Nuestro equipo de expertos trabaja contigo para desarrollar e implementar estrategias que impulsen el crecimiento y la eficiencia de tu negocio.</p>
+            </details>
+          </div>
+
+          <div class="faq-column">
+            <details>
+              <summary>¿Qué beneficios ofrece Microsoft Cloud para mi empresa?</summary>
+              <p>Microsoft Cloud ofrece una amplia gama de beneficios, incluyendo escalabilidad, seguridad avanzada, y acceso a herramientas de análisis de datos y colaboración. Estas características permiten a tu empresa operar de manera más eficiente, proteger datos sensibles y tomar decisiones informadas. Además, la flexibilidad de Microsoft Cloud facilita la adaptación a las necesidades cambiantes del negocio.</p>
+            </details>
+
+            <details>
+              <summary>¿Cómo se mide el éxito de un proyecto de transformación digital?</summary>
+              <p>El éxito de un proyecto de transformación digital se mide mediante varios indicadores clave de rendimiento (KPIs), como la mejora en la eficiencia operativa, la reducción de costos, el aumento de la satisfacción del cliente y el crecimiento de los ingresos. En TECHCENTER, trabajamos contigo para definir estos KPIs desde el inicio y monitoreamos continuamente el progreso para asegurar que se alcancen los objetivos establecidos.</p>
+            </details>
+
+            <details>
+              <summary>¿Qué industrias pueden beneficiarse de los servicios de TECHCENTER?</summary>
+              <p>Los servicios de TECHCENTER son beneficiosos para una amplia variedad de industrias, incluyendo salud, finanzas, manufactura, retail y más. Cada industria enfrenta desafíos únicos, y nuestras soluciones personalizadas están diseñadas para abordar las necesidades específicas de cada sector, ayudando a las empresas a innovar y crecer en un entorno competitivo.</p>
+            </details>
+          </div>
+        </div>
+     </div>
+</section>
+
+<section class="section-container--clr-black section-container--pt-20">
+  <div class="section-header section-header--p-0">
+    <div class="section-text--c-white section-grid grid-2-sp">
+      <div class="column">
+        <h3>¿Estás listo para llevar a tu empresa al siguiente nivel?</h3>
+        <p><br>En TECHCENTER, estamos comprometidos a proporcionarte soluciones personalizadas y soporte continuo para que puedas enfocarte en lo que mejor haces: hacer crecer tu negocio. <br><br>No esperes más, ¡contáctanos hoy mismo para una asesoría gratuita y comienza tu viaje hacia la transformación digital.</p>  
+      </div>
+      <div class="column">
+        <form class="formulario">
+          <h4>Conversemos</h4>
+          <input type="text" id="nombre" name="nombre" placeholder="Ingresa tus nombres" required>
+
+          <input type="text" id="apellido" name="apellido" placeholder="Ingresa tus apellidos" required>
+
+          <input type="email" id="email" name="email" placeholder="Ingresa tu direccion e-mail" required>
+
+          <input type="text" id="telefono" name="telefono" placeholder="Ingresa tu número movil" required>
+
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Ingresa tu mensaje" required></textarea>
+
+          <button type="submit">Envía tu mensaje al asesor</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="section-container" style="border-top: 1px solid #e0e0e0; padding-top: 2rem;">
+    <div class="section-grid grid-4 ">
+      <div class="footer-logo">
+        <img src="assets/img/Logo.png" alt="TechCenter Logo" />
+        <p>Transformación digital e innovación para tu empresa mediante la tecnología de Microsoft Cloud.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Soluciones</h4>
+        <ul>
+          <li><a href="#">Trabajo moderno</a></li>
+          <li><a href="#">Aplicaciones empresariales</a></li>
+          <li><a href="#">Infraestructura</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Enlaces internos</h4>
+        <ul>
+          <li><a href="#">Comunidad Conecta Lite</a></li>
+          <li><a href="#">Comunidad Conecta 360</a></li>
+          <li><a href="#">Centro de Soporte</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contacto</h4>
+        <p><a href="mailto:hola@techcenterperu.com">holatechcenterperu.com</a></p>
+        <p>Av. Larco 162 Int. 504<br>Trujillo, La Libertad<br>Perú</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
