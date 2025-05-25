@@ -10,14 +10,14 @@ export class HomeComponent implements OnInit{
 
 
   logos = [
-    {src: 'assets/img/tecnomin.png', alt: 'tecnomin'},
-    {src: 'assets/img/danper.png', alt: 'danper'},
-    {src: 'assets/img/kampfer.png', alt: 'kampfer'},
-    {src: 'assets/img/pachamama.png', alt: 'pachamama'},
-    {src: 'assets/img/formavena.png', alt: 'formavena'},
-    {src: 'assets/img/remanso.png', alt: 'remanso'},
-    {src: 'assets/img/segusa.png', alt: 'segusa'},
-    {src: 'assets/img/fpf.png', alt: 'fpf'},
+    {src: 'assets/img/marcas/tecnomin.png', alt: 'tecnomin'},
+    {src: 'assets/img/marcas/danper.png', alt: 'danper'},
+    {src: 'assets/img/marcas/kampfer.png', alt: 'kampfer'},
+    {src: 'assets/img/marcas/pachamama.png', alt: 'pachamama'},
+    {src: 'assets/img/marcas/formavena.png', alt: 'formavena'},
+    {src: 'assets/img/marcas/remanso.png', alt: 'remanso'},
+    {src: 'assets/img/marcas/segusa.png', alt: 'segusa'},
+    {src: 'assets/img/marcas/fpf.png', alt: 'fpf'},
 
   ]
 
