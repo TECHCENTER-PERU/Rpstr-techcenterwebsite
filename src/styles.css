@@ -8,5 +8,36 @@
   html, body {
     margin: 0;
     padding: 0;
-    background-color: white;
+    /* background-color: white; */
   }
+
+  @font-face {
+  font-family: 'Averta';
+  src: url('/assets/fonts/Averta.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: url('/assets/fonts/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: url('/assets/fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-Light';
+  src: url('/assets/fonts/Poppins-Light.ttf') format('truetype');
+}
+
+h1, h4 {
+  font-family: 'Averta';
+}
+
+h2, h3 {
+  font-family: 'Poppins-Bold';
+}
+a {
+  font-family: 'Poppins-Light';
+}
