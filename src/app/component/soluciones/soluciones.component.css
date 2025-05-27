@@ -1,0 +1,352 @@
+header {
+  position: relative;
+  z-index: 1;
+}
+
+.header-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: url('/assets/img/header.jpg') no-repeat center center / cover;
+  display: flex;
+  flex-direction: column; /* para apilar navbar y overlay verticalmente */
+}
+
+.header-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0) 100%);
+  display: flex;
+  flex-direction: column;
+  flex: content;
+  align-items: left;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  text-align: left;
+  padding: 0 80px;
+  z-index: 5; 
+}
+
+.section-wrapper {
+  position: relative;
+}
+
+.linea-decorativa {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 2px;
+  height: 100%;
+  z-index: 1;
+  
+}
+
+.linea-decorativa.white {
+  background-color: white;
+}
+
+.linea-decorativa.gradient {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 30%, #ffffff 100%);
+}
+
+/* Container */
+
+.section-container {
+  position: relative;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.section-container--pt-80 {
+  position: relative;
+  padding-top: 80px;
+}
+
+.section-container--pt-20 {
+  padding-top: 20px;
+}
+
+.section-container--clr-f7f7fd {
+  background-color: #F7F7FD;
+  box-sizing: border-box;
+}
+
+.section-container--clr-black {
+  background-color: #000000;
+  box-sizing: border-box;
+}
+
+/* Header */
+
+.section-header {
+  display: grid;
+  gap: 20px;
+}
+
+.section-header--p-80 {
+  padding: 60px 80px;
+}
+
+/* ========== Grids ========== */
+.section-grid {
+  display: grid;
+  padding: 40px 90px 80px 90px;
+  gap: 48px 200px;
+  box-sizing: border-box;
+  justify-content: center;
+  margin: 0 auto;
+  overflow-x: hidden;
+  align-items: center;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1300px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1800px;
+}
+.grid-2-sp {
+    grid-template-columns: repeat(2, 1fr);    
+}
+
+/* Cards */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  z-index: 2;
+  min-height: 100px;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+.color-blue{
+   background: linear-gradient(to right, #3171DE, #704AF2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-size: 25px;
+
+}
+
+.color-green{
+   background: linear-gradient(to right, #62AE6E, #EDE14F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-size: 25px;
+}
+
+.black{
+    color: #000000;
+}
+
+
+.linea-lateral {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  padding-left: 40px;
+}
+
+.linea-lateral::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  height: calc(100% - 20px);
+  width: 2px;
+  background-color: #00c853; /* Verde claro */
+}
+
+.icono-cinta {
+  position: absolute;
+  left: 11px;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  background-color: #4285f4; /* Azul */
+  border-radius: 4px;
+  transform: rotate(45deg); /* Para dar forma de cinta/rombo */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.contenido-soluciones {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.contenido-soluciones h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.contenido-soluciones p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background: #f9f9f9;
+}
+
+.texto-header {
+  max-width: 50%;
+}
+
+.etiqueta {
+  font-family: 'Poppins-Regular';
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.white{
+  color: #ffffff;
+}
+
+.yellow{
+  color: #f9b233;
+}
+
+.header-section h1 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.header-section p {
+  font-size: 16px;
+  color: #666;
+}
+
+.header-img {
+  max-width: 45%;
+  border-radius: 8px;
+}
+
+
+.servicios-section {
+  background: linear-gradient(to right, #3171DE, #4AC0F2);
+  color: white;
+  padding: 60px 20px;
+  border-radius: 20px;
+  margin: 40px 20px;
+}
+
+.contenido-enfoque {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contenido-enfoque h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.cards-enfoque {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  color: #333;
+  border-radius: 16px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.card .icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card h4 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #2074f1;
+}
+
+/*-------------------*/
+/* Fondo con degradado */
+.servicios-section {
+  background: linear-gradient(to right, #1e88e5, #42a5f5);
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Contenedor blanco con bordes redondeados */
+.servicios-container {
+  background-color: #fff;
+  border-radius: 28px;
+  padding: 40px;
+  display: flex;
+  gap: 60px; /* Espacio entre tarjetas */
+  max-width: 1200px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Cada tarjeta */
+.servicio-card {
+  text-align: center;
+  max-width: 300px;
+  flex: 1;
+}
+
+/* Iconos */
+.icono {
+  font-size: 40px;
+  color: #673ab7;
+  margin-bottom: 20px;
+}
+
+/* Títulos */
+.servicio-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Descripciones */
+.servicio-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}

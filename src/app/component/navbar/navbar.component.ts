@@ -1,11 +1,33 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  isMenuOpen = false;
+  submenuOpen = false;
 
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+    if (!this.isMenuOpen) {
+      this.submenuOpen = false; // cerrar submenu cuando cierro menú general
+    }
+  }
+
+  toggleSubmenu(event: Event) {
+    event.preventDefault();
+    event.stopPropagation(); // evita que el click burbujee y cierre menú general
+    this.submenuOpen = !this.submenuOpen;
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
+    this.submenuOpen = false;
+  }
 }

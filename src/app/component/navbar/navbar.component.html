@@ -1,24 +1,33 @@
 <nav>
-  <div class="logo">
-    <img src="assets/img/logo_blanco.png" alt="Logo" />
-  </div>
-
-  <div class="menu-central">
-    <div class="menu-item">
-      <a href="#">Soluciones <img src="assets/img/iconos/abajo.png" alt=""></a>
-      <div class="submenu">
-        <a href="#">Trabajo Moderno</a>
-        <a href="#">Aplicaciones Empresariales</a>
-        <a href="#">Infraestructura</a>
-      </div>
+  <div class="navbar-wrapper">
+    <div class="logo">
+      <img src="assets/img/logo_blanco.png" alt="Logo" />
     </div>
-    <a href="#">Servicios</a>
-    <a href="#">Nosotros</a>
-    <a href="#">Recursos</a>
-    <a href="#">Contacto</a>
-  </div>
 
-  <div class="boton-derecho">
-    <a class="btn-nav" href="#"> <img src="assets/img/iconos/whatsapp.png" alt=""> +51 950 963 557</a>
+    <div class="menu-central" [ngClass]="{ 'show': isMenuOpen }">
+      <div class="menu-item">
+        <a [routerLink]="'/soluciones'" (click)="toggleSubmenu($event)">
+          Soluciones <img src="assets/img/iconos/abajo.png" alt="" />
+        </a>
+        <div class="submenu" [ngClass]="{ 'show': submenuOpen }">
+          <a href="#" (click)="closeMenu()">Trabajo Moderno</a>
+          <a href="#" (click)="closeMenu()">Aplicaciones Empresariales</a>
+          <a href="#" (click)="closeMenu()">Infraestructura</a>
+        </div>
+      </div>
+
+      <a href="#" (click)="closeMenu()">Servicios</a>
+      <a href="#" (click)="closeMenu()">Nosotros</a>
+      <a href="#" (click)="closeMenu()">Recursos</a>
+      <a href="#" (click)="closeMenu()">Contacto</a>
+    </div>
+
+    <div class="boton-derecho">
+      <a class="btn-nav" href="#">
+        <img src="assets/img/iconos/whatsapp.png" alt="" /> +51 950 963 557
+      </a>
+    </div>
+
+    <div class="hamburger" (click)="toggleMenu()">&#9776;</div>
   </div>
 </nav>
