@@ -1,27 +1,37 @@
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 40px;
-  height: 60px;
-  background: transparent;
-  z-index: 10;
   width: 100%;
   position: relative;
+  background: transparent;
+  z-index: 10;
+  padding: 20px 40px;
 }
 
+.navbar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.navbar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Logo */
 .logo img {
   height: 50px;
   object-fit: contain;
 }
 
+/* Menú central */
 .menu-central {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 80px;
   flex: 1;
-  justify-content: center;
-  position: relative;
 }
 
 .menu-central a {
@@ -47,7 +57,7 @@ nav {
   vertical-align: middle;
 }
 
-
+/* Submenu estilos */
 .submenu {
   position: absolute;
   top: 100%;
@@ -72,22 +82,40 @@ nav {
   color: #ffd700;
 }
 
-.menu-item:hover .submenu {
-  display: flex;
+/* Desktop: mostrar submenu con hover */
+@media (min-width: 992px) {
+  .menu-item:hover .submenu {
+    display: flex;
+  }
 }
 
+/* Móvil: mostrar submenu solo con clase show */
+@media (max-width: 991px) {
+  .submenu.show {
+    display: flex !important;
+    flex-direction: column;
+    position: static;
+    background-color: transparent;
+    padding: 0;
+    min-width: auto;
+  }
+}
+
+/* Botón derecho */
 .boton-derecho {
   flex-shrink: 0;
 }
 
 .btn-nav {
   border: 2px solid white;
-  color: rgb(255, 255, 255) !important;
+  color: white !important;
   padding: 10px 16px;
   border-radius: 50px;
   font-weight: 600;
   text-decoration: none;
   transition: background 0.3s;
+   align-items: center; 
+  gap: 8px;
 }
 
 .btn-nav img {
@@ -95,7 +123,50 @@ nav {
   vertical-align: middle;
 }
 
-
 .btn-nav:hover {
   background-color: #66B066;
+}
+
+
+/* Hamburguesa */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+@media (max-width: 1024px) {
+  .boton-derecho {
+    display: none;
+  }
+  /* otros estilos... */
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 991px) {
+  .menu-central {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    order: 3;
+  }
+
+  .menu-central.show {
+    display: flex;
+  }
+
+  .boton-derecho {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }

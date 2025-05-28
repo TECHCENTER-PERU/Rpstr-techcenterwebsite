@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { HomeComponent } from "./component/home/home.component";
-import { NavbarComponent } from "./component/navbar/navbar.component";
+import { RouterModule } from '@angular/router';
+import { NavbarComponent } from './component/navbar/navbar.component';
+import { HomeComponent } from './component/home/home.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HomeComponent, NavbarComponent],
+  standalone: true,
+  imports: [RouterModule, NavbarComponent, HomeComponent, FooterComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'web-techcenter';
