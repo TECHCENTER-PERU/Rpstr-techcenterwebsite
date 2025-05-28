@@ -1,13 +1,16 @@
 <nav>
     <div class="navbar-wrapper">
-      <div class="logo">
+    <div class="logo">
+      <a [routerLink]="'/'">
         <img src="assets/img/Logo.png" alt="Logo" />
-      </div>
+      </a>
+    </div>
+
   
       <div class="menu-central" [ngClass]="{ 'show': isMenuOpen }">
         <div class="menu-item">
           <a [routerLink]="'/soluciones'" (click)="toggleSubmenu($event)">
-            Soluciones <img src="assets/img/iconos/abajo.png" alt="" />
+            Soluciones <img src="assets/img/iconos/abajo-black.png" alt="" />
           </a>
           <div class="submenu" [ngClass]="{ 'show': submenuOpen }">
             <a href="#" (click)="closeMenu()">Trabajo Moderno</a>

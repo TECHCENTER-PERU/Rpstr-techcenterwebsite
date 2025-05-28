@@ -34,10 +34,10 @@ nav {
     justify-content: center;
     gap: 80px;
     flex: 1;
-    padding: 10px 20px;  /* Ajusta el relleno para que no sobresalga por los costados */
-    max-width: 1000px;  /* Asegura que no sobresalga el ancho del contenedor */
-    box-sizing: border-box;  /* Incluye el padding dentro del tamaño del elemento */
-    overflow: hidden;  /* Evita que cualquier contenido que sobrepase el contenedor sea visible */
+    padding: 10px 20px;  
+    max-width: 1000px;
+    box-sizing: border-box;
+    overflow: visible;
   }
   
   .menu-central a {
@@ -75,7 +75,7 @@ nav {
     min-width: 200px;
     border-radius: 4px;
   }
-  
+
   .submenu a {
     padding: 8px 20px;
     white-space: nowrap;
