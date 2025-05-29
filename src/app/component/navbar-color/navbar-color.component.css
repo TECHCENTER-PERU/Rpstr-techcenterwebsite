@@ -140,7 +140,7 @@ nav {
   .hamburger {
     display: none;
     font-size: 28px;
-    color: white;
+    color: rgb(0, 0, 0);
     cursor: pointer;
     margin-left: 20px;
   }
@@ -159,7 +159,7 @@ nav {
       flex-direction: column;
       width: 100%;
       gap: 20px;
-      background-color: rgba(0, 0, 0, 0.95);
+      background-color: rgba(185, 185, 185, 0.95);
       padding: 20px;
       margin-top: 10px;
       border-radius: 10px;
