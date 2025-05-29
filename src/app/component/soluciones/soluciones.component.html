@@ -27,9 +27,11 @@
                             <h3 class="color-blue">Trabajo Moderno</h3>
                         </div>
                     </a>
-                    <div class="card">
-                        <h3 class="color-green">Infraestructura</h3>
-                    </div>
+                    <a [routerLink]="'/infraestructura'" class="card-link">
+                        <div class="card">
+                            <h3 class="color-green">Infraestructura</h3>
+                        </div>
+                    </a>
                     <a [routerLink]="'/aplicaciones-empresariales'" class="card-link">
                         <div class="card">
                             <h3 class="color-blue">Aplicaciones Empresariales</h3>
@@ -106,7 +108,7 @@
                 <div class="circle-line green"></div>
                 <span class="etiqueta yellow">INFRAESTRUCTURA</span>
                 <p>Mejora la rentabilidad y reduce los costes de la infraestructura tecnológica de tu empresa. Construye, supervisa y administra tu infraestructura crítica utilizando la tecnología de Microsoft Cloud.</p>
-                <button>Ver más</button>
+                <button [routerLink]="'/infraestructura'">Ver más</button>
                 <div class="icon-green"></div>
                 <div class="icon"></div>
                 <div class="custom-shape custom-front-2">
