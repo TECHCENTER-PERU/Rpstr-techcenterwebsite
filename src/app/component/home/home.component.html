@@ -24,17 +24,20 @@
     </div>
   </div>
   <div class="section-grid grid-3">
-    <div class="card">
-      <img src="assets/img/iconos/trabajo.png" alt="">
-      <h3>Trabajo moderno</h3>
-      <p>Implementa soluciones como Microsoft Teams y SharePoint para facilitar el trabajo híbrido, mejorar la colaboración y aumentar la productividad.</p>
-    </div>
+    <a [routerLink]="'/trabajo-moderno'" class="card-link">
+      <div class="card">
+        <img src="assets/img/iconos/trabajo.png" alt="">
+        <h3>Trabajo moderno</h3>
+        <p>Implementa soluciones como Microsoft Teams y SharePoint para facilitar el trabajo híbrido, mejorar la colaboración y aumentar la productividad.</p>
+      </div>
+    </a>
     <div class="card">
       <img src="assets/img/iconos/aplicaciones.png" alt="">
       <h3>Aplicaciones empresariales</h3>
       <p>Digitaliza tus procesos con Dynamics 365 y Power Apps, integrando automatización y análisis en tiempo real.</p>
     </div>
     <div class="card">
+      <img src="assets/img/iconos/infraestructura.png" alt="">
       <h3>Infraestructura </h3>
       <p>Migra y optimiza tu infraestructura en la nube con Microsoft Azure, reduciendo costos y mejorando el rendimiento.</p>
     </div>
@@ -97,7 +100,9 @@
    <div class="clientes-grid">
       <div class="carousel">
         <div class="carousel-item" *ngFor="let logo of logos">
-          <img [src]="logo.src" [alt]="logo.alt">
+	          <a [href]="logo.url" >
+              <img [src]="logo.src" [alt]="logo.alt">
+            </a>
         </div>
       </div>
     </div>
@@ -188,7 +193,7 @@
         </div>
         <div class="card-text">
           <h3>Cómo las Empresas de Software Lideran la Transformación de la IA</h3>
-          <p>"Facilitamos la transición de tus aplicaciones y datos a la nube de Microsoft de manera segura y eficiente, minimizando cualquier interrupción en tus operaciones."</p>
+          <p>Datos e IA</p>
         </div>
         <button>Leer mas</button>
       </div>
@@ -198,7 +203,7 @@
         </div>
         <div class="card-text">
           <h3>Optimiza tu negocio con Agentes IA en Microsoft Dynamics 365</h3>
-          <p>"TECHCENTER optimizó nuestra productividad con Office 365, mejorando la seguridad de la información y facilitando el acceso y colaboración eficiente en toda la empresa."</p>
+          <p>Datos e IA</p>
         </div>
         <button>Leer mas</button>
 
@@ -209,7 +214,7 @@
         </div>
         <div class="card-text">
           <h3>Empodera tu negocio con IA: Descubre el Chat de Microsoft 365 Copilot</h3>
-          <p>Empodera tu negocio con IA: Descubre el Chat de Microsoft 365 Copilot</p>
+          <p>Datos e IA</p>
         </div>
         <button>Leer mas</button>
       </div>
