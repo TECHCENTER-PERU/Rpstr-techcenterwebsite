@@ -401,6 +401,18 @@ h4{
   align-items: center;
 }
 
+.icon-line{
+  background: linear-gradient(to left, #4A6FF2, #3DA3E8, #31D4DE);
+  clip-path: polygon(53% 0, 100% 0, 100% 50%, 50% 100%, 0 100%, 0 50%);
+  height: 55px;
+  max-height: calc(100% - 90px);
+  position: absolute;
+  left: 40px;
+  top: 130px;
+  width: 55px;
+  z-index: 11;
+}
+
 /* Estilos comunes */
 @media screen and (max-width: 1024px) {
   .header-container {
@@ -417,7 +429,7 @@ h4{
   }
 
   .section-header--p-80 {
-    padding: 0px 80px;
+    padding: 0px 130px;
   }
 
   .section-header-flex {
@@ -769,4 +781,11 @@ h4{
   .section-card p{
     font-size: 11px;
   }
+
+.icon-line{
+  height: 35px;
+  left: 15px;
+  top: 130px;
+  width: 35px;
+}
 }
