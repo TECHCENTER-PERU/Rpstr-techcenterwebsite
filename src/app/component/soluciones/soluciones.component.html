@@ -22,9 +22,11 @@
                 </p>
 
                 <div class="section-grid grid-2">
-                    <div class="card">
-                        <h3 class="color-blue">Trabajo Moderno</h3>
-                    </div>
+                    <a [routerLink]="'/trabajo-moderno'" class="card-link">
+                        <div class="card">
+                            <h3 class="color-blue">Trabajo Moderno</h3>
+                        </div>
+                    </a>
                     <div class="card">
                         <h3 class="color-green">Infraestructura</h3>
                     </div>
@@ -50,9 +52,7 @@
                     💻 <!-- Puedes reemplazar por un SVG o ícono real -->
                 </div>
                 <h3 class="black">Asesoría y consultoría</h3>
-                <p>
-                    Our frontend developers understand the delicate balance between aesthetics and functionality.
-                </p>
+                <p>Te ayudamos a desarrollar estrategias que pongan a tu empresa en el camino correcto desde el primer día en la nube de Microsoft.</p>
                 </div>
 
                 <div class="servicio-card">
@@ -60,9 +60,7 @@
                     💻 <!-- Ícono repetido solo de ejemplo -->
                 </div>
                 <h3 class="black">Servicios profesionales</h3>
-                <p>
-                    Our frontend developers understand the delicate balance between aesthetics and functionality.
-                </p>
+                <p>Diseñamos e implementamos una solución que garantice que estás aprovechando al máximo la nube de Microsoft.</p>
                 </div>
 
                 <div class="servicio-card">
@@ -70,9 +68,7 @@
                     🛠️ <!-- Reemplazar con ícono de backend o código -->
                 </div>
                 <h3 class="black">Servicios gestionados</h3>
-                <p>
-                    Our backend developers are the architects of efficiency and security. They design and build the databases and APIs.
-                </p>
+                <p>Administramos, operamos y optimizamos las incidencias diarias de tu ambiente en la nube de Microsoft.</p>
                 </div>
             </div>
         </div>
@@ -80,10 +76,9 @@
     <section class="section-container section-container--pt-80 izquierda"> 
             <div class="section-header section-header--p-80">
                 <div class="circle-line green"></div>
-
                 <span class="etiqueta yellow">TRABAJO MODERNO</span>
                 <p>Permite que los miembros de tu equipo se concentren, desarrollen, compartan y protejan sus ideas más importantes para que puedan tener el mayor impacto posible desde cualquier lugar y en cualquier dispositivo.</p>
-                <button>Ver más</button>
+                <button [routerLink]="'/trabajo-moderno'">Ver más</button>
                 <div class="icon-green"></div>
                 <div class="icon"></div>
                 <div class="custom-shape custom-front-2">
