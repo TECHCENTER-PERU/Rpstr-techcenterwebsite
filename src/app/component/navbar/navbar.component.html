@@ -10,7 +10,7 @@
           Soluciones <img src="assets/img/iconos/abajo.png" alt="" />
         </a>
         <div class="submenu" [ngClass]="{ 'show': submenuOpen }">
-          <a href="#" (click)="closeMenu()">Trabajo Moderno</a>
+          <a [routerLink]="'/trabajo-moderno'" (click)="closeMenu()">Trabajo Moderno</a>
           <a href="#" (click)="closeMenu()">Aplicaciones Empresariales</a>
           <a href="#" (click)="closeMenu()">Infraestructura</a>
         </div>
