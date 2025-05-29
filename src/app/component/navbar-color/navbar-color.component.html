@@ -15,11 +15,11 @@
           <div class="submenu" [ngClass]="{ 'show': submenuOpen }">
             <a [routerLink]="'/trabajo-moderno'" (click)="closeMenu()">Trabajo Moderno</a>
             <a [routerLink]="'/aplicaciones-empresariales'" (click)="closeMenu()">Aplicaciones Empresariales</a>
-            <a [routerLink]="'/infraestructura'"(click)="closeMenu()">Infraestructura</a>
+            <a [routerLink]="'/infraestructura'" (click)="closeMenu()">Infraestructura</a>
           </div>
         </div>
   
-        <a href="#" (click)="closeMenu()">Servicios</a>
+        <a [routerLink]="'/servicios'" (click)="closeMenu()">Servicios</a>
         <a href="#" (click)="closeMenu()">Nosotros</a>
         <a href="#" (click)="closeMenu()">Recursos</a>
         <a href="#" (click)="closeMenu()">Contacto</a>
