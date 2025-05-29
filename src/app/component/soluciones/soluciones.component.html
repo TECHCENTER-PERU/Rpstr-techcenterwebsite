@@ -30,9 +30,11 @@
                     <div class="card">
                         <h3 class="color-green">Infraestructura</h3>
                     </div>
-                    <div class="card">
-                        <h3 class="color-blue">Aplicaciones Empresariales</h3>
-                    </div>
+                    <a [routerLink]="'/aplicaciones-empresariales'" class="card-link">
+                        <div class="card">
+                            <h3 class="color-blue">Aplicaciones Empresariales</h3>
+                        </div>
+                    </a>
                     <div class="card">
                         <h3 class="color-green">Seguridad</h3>
                     </div>
@@ -91,7 +93,7 @@
                 <div class="circle-line green"></div>
                 <span class="etiqueta yellow">APLICACIONES EMPRESARIALES</span>
                 <p>Potencia las experiencias de tus clientes y la agilidad operativa de tu empresa con aplicaciones que unen a las personas, los conocimientos y los procesos en todas las líneas de negocio.</p>
-                <button>Ver más</button>
+                <button [routerLink]="'/aplicaciones-empresariales'">Ver más</button>
                 <div class="icon-green"></div>
                 <div class="icon"></div>
                 <div class="custom-shape custom-front-2">
