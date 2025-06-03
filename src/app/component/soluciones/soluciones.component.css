@@ -301,7 +301,7 @@ button {
 }
 
 .contenido-enfoque p {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .contenido-enfoque .etiqueta {
@@ -518,6 +518,12 @@ button {
   flex: 1;
   max-width: 300px;
   text-align: center;
+}
+
+.servicio-card img{
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
 }
 
 .servicio-card h3 {
@@ -916,3 +922,199 @@ button {
   }
 
 }
+
+@media screen and (max-width: 480px) {
+  .section-container.izquierda .section-header span,
+  .section-container.izquierda .section-header p,
+  .section-container.izquierda .section-header button,
+  .section-container.izquierda .section-header .icon,
+  .section-container.izquierda .section-header .icon-green {
+    grid-column: 1;
+  }
+
+  .contenido-enfoque span{
+    font-size: 12px;
+  }
+  .contenido-enfoque h3{
+    font-size: 16px;
+  }
+  .servicio-card h3{
+    font-size: 16px;
+  }
+  .servicio-card p{
+    font-size: 13px;
+  }
+    .header-container {
+      height: 300px;
+      background-position: center center;
+    }
+
+    h2 .yellow{
+      font-size: 15px;
+    }
+    .yellow {
+      font-size: 10px;
+    }
+
+
+    h1{
+      font-size: 20px;
+    }
+    p{
+      font-size: 13px;
+    }
+    .linea-decorativa-total{
+      left: 30px;
+    }
+
+    .derecha button{
+      margin-left: 10px;
+    }
+
+    .section-header p {
+    font-size: 12px;
+    }
+
+    .header-overlay {
+      padding: 0 20px;
+    }
+    .header-overlay p {
+      max-width: 190px;
+    }
+
+    .section-header--p-80 {
+      padding: 40px 50px 0px 90px;
+    }
+    .circle-line{
+      height: 15px;
+      width: 15px;
+      left: 24px;
+    }
+
+    .section-header-flex {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .icon,
+    .icon-green,
+    .custom-shape.custom-front-2 {
+      display: none;
+    }
+
+    .segment.gradient{
+      height: 767px;
+    }
+
+    .segment.white{
+      height: 1280px;
+    }
+
+    .section-grid {
+      padding: 10px 60px;
+      gap: 5px;
+    }
+
+    .grid-3 {
+      grid-template-columns: 1fr;
+    }
+
+    .grid-2 {
+      grid-template-columns: 1fr;
+    }
+
+    .grid-4 {
+      grid-template-columns: 1fr;
+    }
+
+    .card-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .card {
+      padding: 30px;
+    }
+
+    .card.new img {
+      height: 200px;
+    }
+
+    .section-card {
+      max-width: 100%;
+    }
+
+    .section-header p {
+      max-width: 100%;
+    }
+
+    .faq-column details {
+      min-width: 300px;
+    }
+
+    .faq-columns {
+      gap: 10px;
+      flex-direction: column;
+    }
+
+    .section-grid.centered {
+      padding: 0px 90px 80px 90px;
+    }
+    .section-text.centered {
+      padding: 40px 50px;
+    }
+    .card-pair{
+      display: grid;
+    }
+    .faq-column summary{
+      font-size: 12px;
+    }
+    button{
+      font-size: 12px;
+      margin: 1rem auto 1rem 10px;
+    }
+    h3{
+      font-size: 15px;
+    }
+
+    h2{
+      font-size: 15px;
+    }
+    h4{
+      font-size: 16px;
+    }
+    .container{
+      margin-top: 0px;
+    }
+    .card-text h3{
+      font-size: 15px;
+    }
+    .card-text p{
+      font-size: 11px;
+    }
+
+    .card h3{
+      font-size: 15px;
+    }
+    .card p{
+      font-size: 11px;
+    }
+    .card img{
+      height: 25px;
+    }
+
+    .section-card h3{
+      font-size: 15px;
+    }
+    .section-card p{
+      font-size: 11px;
+    }
+
+  .icon-line{
+    height: 35px;
+    left: 15px;
+    top: 130px;
+    width: 35px;
+  }
+}
+
