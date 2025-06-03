@@ -10,12 +10,11 @@ interface FormData {
   descripcion: string;
 }
 
-
 @Component({
   selector: 'app-footer',
   imports: [ReactiveFormsModule],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
 
@@ -33,27 +32,5 @@ export class FooterComponent {
     });
   }
 
-  // Función para enviar los datos al Webhook
-  sendDataToWebhook(data: FormData): void {
-    fetch('https://prod-22.brazilsouth.logic.azure.com:443/workflows/8805143ea814475bb569639c06e8519a/triggers/manual/paths/invoke?api-version=2016-06-01', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(data => console.log('Éxito:', data))
-    .catch(error => console.error('Error:', error));
-  }
 
-  // Función para manejar el envío del formulario
-  handleSubmit(): void {
-    if (this.formulario.valid) {
-      const formData: FormData = this.formulario.value;
-      this.sendDataToWebhook(formData);
-    } else {
-      console.error('Formulario no válido');
-    }
-  }
 }
