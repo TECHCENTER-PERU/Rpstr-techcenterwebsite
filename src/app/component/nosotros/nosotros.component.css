@@ -1,0 +1,844 @@
+.header-container {
+  background: url('/assets/img/soluciones/principal.png') no-repeat center center / cover;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+  width: 100%;
+}
+.header-overlay {
+  align-items: left;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0) 100%);
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex: content;
+  flex-direction: column;
+  inset: 0;
+  justify-content: center;
+  padding: 0 80px;
+  position: absolute;
+  text-align: left;
+  z-index: 5;
+}
+.header-overlay p {
+  max-width: 600px;
+}
+.etiqueta {
+  font-family: 'Poppins-Regular';
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.yellow {
+  color: #f9b233;
+}
+
+
+.section-container {
+  box-sizing: border-box;
+  position: relative;
+}
+.section-container--pt-80 {
+  padding-top: 80px;
+  position: relative;
+}
+.container-blue{
+    background-color: #05a6f011;
+}
+
+.section-header {
+  display: grid;
+  gap: 20px;
+}
+.section-header--p-80 {
+  padding: 60px 200px;
+}
+.section-header--p-500 {
+  padding: 0px 500px 80px;;
+}
+.section-header--mw-600 p {
+  max-width: 600px;
+}
+.section-header span,
+.section-header p,
+.section-header button,
+.section-header .icon,
+.section-header .icon-green {
+  grid-column: 1;
+}
+.section-header-clientes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 200px;
+  text-align: left;
+}
+
+
+.card-information{
+    display: flex;
+    border-color: #000000;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 100px;
+    height: 100%;
+    width: 600px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    z-index: 2;
+}
+.imagen-mascara {
+    top: 100px; /* Mueve la imagen más arriba */
+    position: absolute; /* Asegura que la imagen no se desplace de su contenedor */
+    left: 900px;
+    bottom: 0;
+    z-index: 1;
+}
+
+.imagen-mascara img {
+    width: 550px;
+    height: 550px;
+    object-fit: cover; /* Ajusta la imagen para que cubra el área sin distorsionarse */
+    -webkit-mask-image: url('/assets/img/formas/plantilla2.png'); /* La imagen con la máscara de transparencia */
+    mask-image: url('/assets/img/formas/plantilla2.png');
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+.section-text{
+  text-align: left;
+}
+.section-text h4 {
+  margin-bottom: 12px; /* Separación debajo del subtítulo */
+}
+
+.section-text h2 {
+  margin-bottom: 20px; /* Separación debajo del título principal */
+}
+
+.section-text p {
+    font-family: 'Poppins-Bold';
+    margin-bottom: 0; /* O mantenlo si hay más elementos debajo */
+    line-height: 1.6;  /* Para mejorar la legibilidad del párrafo */
+    max-width: 700px;
+}
+.section-text img{
+    width: 80px;
+    height: 80px;
+}
+.text-flex{
+    display: flex;
+}
+.section-text.centered {
+  text-align: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 80px 299px 80px 299px;
+  display: flex;
+  align-items: center;
+}
+.section-header-clientes .section-text p {
+    font-family: 'Poppins-Regular';
+    line-height: 1.6;  /* Para mejorar la legibilidad del párrafo */
+    max-width: 600px;
+}
+
+
+.section-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 60px;
+  margin-left: 80px;
+}
+.nombre{
+  font-family: 'Poppins-Bold';
+}
+.cargo{
+    font-size: 12px;
+}
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 50%;
+  display: block;
+}
+.logo2 {
+  width: 60px;  
+  height: 60px; 
+  overflow: hidden; 
+  border-radius: 50%; 
+}
+
+.logo2 img {
+  width: 110%;  /* Hacemos que la imagen sea más grande que el contenedor */
+  height: 120%; /* Hacemos que la imagen sea más grande que el contenedor */
+  object-fit: cover; /* Esto asegura que la imagen cubra todo el contenedor */
+  display: block; /* Elimina el espacio extra debajo de la imagen */
+}
+.texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.2;
+  font-size: 14px;
+}
+.texto h3,
+.texto p {
+  margin: 0px;
+  font-weight: normal;
+  max-width: 600px;
+}
+
+
+.estadisticas {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;  /* Asegura que todos los items estén alineados verticalmente */
+  padding: 30px;
+  border: 2px solid #0070f3;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: auto;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.estadisticas .item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  /* Alinea los elementos hacia el inicio (parte superior) */
+  text-align: left;  /* Alinea el texto a la izquierda */
+  max-width: 190px;
+  height: 100px; /* Ajusta la altura para que no haya tanto espacio hacia abajo */
+  justify-content: flex-start; /* Hace que el contenido se alinee hacia la parte superior */
+}
+
+.estadisticas .item .image-text {
+  display: flex;
+  align-items: center; /* Alinea la imagen y el h3 en la misma línea */
+  margin-bottom: 5px; /* Reduce el espacio entre la imagen + h3 y el p */
+}
+
+.estadisticas .item img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  background-color: #0070f3;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 5px;
+}
+
+.estadisticas .item h3 {
+  font-size: 35px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.estadisticas .item p {
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+  margin: 0; /* Elimina el margen para que el p se alinee exactamente debajo del h3 */
+}
+
+
+
+.section-text-2 {
+  display: flex;
+  text-align: left;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+.text-left {
+  flex: 1;
+  text-align: left;
+}
+.text-right {
+  flex: 1;
+}
+.divider {
+  width: 1px;
+  background-color: #ccc;
+  height: 100%;
+}
+
+
+.section-grid {
+  display: grid;
+  padding: 40px 90px 80px 90px;
+  gap: 48px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+.section-grid.centered{
+  align-items: center;
+  box-sizing: border-box;
+  display: grid;
+  gap: 48px 200px;
+  justify-content: center;
+  margin: 0 auto;
+  overflow-x: hidden;
+  padding: 40px 90px 80px 90px;
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1300px;
+}
+
+
+.card {
+  display: flex;
+  border-color: #000000;
+  flex-direction: column;
+  height: 100%;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  z-index: 2;
+}
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+  max-width: 600px;
+}
+.card:hover {
+  transform: translateY(-4px);
+}
+.card img {
+  height: 30px; 
+  margin-bottom: 16px;
+  display: block;
+  margin-right: auto;
+}
+.card-text {
+  margin-top: 20px;
+  flex-grow: 1;
+}
+
+
+.experiencia-icon {
+  position: relative;
+  width: 554px;
+  height: 600px;
+}
+.custom-shape {
+  grid-column: 2;
+}
+.custom.custom-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 450px;
+  height: auto;
+  transform: translate(20%, 40%);
+  z-index: 0;
+}
+.custom-shape.custom-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 450px;
+  height: auto;
+  clip-path: polygon(53% 0, 100% 0, 100% 50%, 50% 100%, 0 100%, 0 50%);
+  border-radius: 40px;
+  transform: translate(5%, 10%); /* Más arriba, menos desplazamiento vertical */
+  z-index: 1;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 60px;
+}
+
+button {
+  background-color: #0078d4;
+  border: none;
+  border-radius: 30px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 1rem auto 1rem 400px;
+  padding: 0.6rem 1.2rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+h4{
+  color: #3171DE;
+}
+
+.faq-column {
+  flex: 1;
+  min-width: 400px;
+}
+
+
+.faq-column details,
+.faq details {
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+  min-width: 400px;
+  max-width: 600px;
+  max-height: 150px;
+  overflow: hidden;
+  position: relative;
+}
+
+.faq-column details[open],
+.faq details[open] {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+.faq-column details p,
+.faq details p {
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+.faq-column summary,
+.faq summary {
+  font-family: 'Poppins-Regular';
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+  padding-right: 32px;
+  list-style: none;
+}
+
+.faq-column summary::-webkit-details-marker,
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-column summary::after,
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+  font-weight: 900;
+  transition: color 0.3s ease;
+}
+
+.faq-column details[open] summary::after,
+.faq details[open] summary::after {
+  content: "–";
+  color: #52BD95;
+}
+
+.faq-columns {
+  display: flex;
+  gap: 40px;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+
+.icon-line{
+  background: linear-gradient(to left, #4A6FF2, #3DA3E8, #31D4DE);
+  clip-path: polygon(53% 0, 100% 0, 100% 50%, 50% 100%, 0 100%, 0 50%);
+  height: 55px;
+  max-height: calc(100% - 90px);
+  position: absolute;
+  left: 40px;
+  top: 130px;
+  width: 55px;
+  z-index: 11;
+}
+
+/* Estilos comunes */
+@media screen and (max-width: 1024px) {
+  h1{
+    max-width: 500px;
+  }
+  .card-information {
+    margin-left: 20px; 
+    margin-right: 20px;
+    margin-bottom: 30px;
+    width: 450px; 
+    max-width: 100%; 
+    height: 400px;
+  }
+
+  /* Ajustar la posición de la imagen */
+  .imagen-mascara {
+    left: 580px; /* Asegurar que la imagen esté alineada correctamente */
+    top: 150px; /* Ajustar la posición superior */
+
+  }
+  .imagen-mascara img {
+    width: 400px;
+    height: 400px;
+  }
+  .header-container {
+    height: 700px;
+    background-position: center center;
+  }
+
+  .header-overlay {
+    padding: 0 40px;
+  }
+
+  .header-overlay p {
+    max-width: 400px;
+  }
+
+  .section-header--p-80 {
+    padding: 0px 130px;
+  }
+
+  .section-header--p-500 {
+    padding: 0px 200px 80px;
+  }
+
+  .section-header-flex {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .section-grid {
+    padding: 40px 100px;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-2, .grid-4, .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .section-header p, .faq-column, .section-card {
+    max-width: 100%;
+  }
+
+  .faq-columns {
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .section-text.centered {
+    padding: 80px 20px;
+  }
+
+  button {
+    margin: 1rem auto 1rem 100px;
+  }
+  .custom.custom-back{
+    width: 350px;
+  }
+  .custom-shape.custom-front{
+    width: 350px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header-container {
+    height: 500px;
+    background-position: center center;
+  }
+
+  .header-overlay {
+    padding: 0 40px;
+  }
+
+  .header-overlay p {
+    max-width: 300px;
+  }
+
+  .section-header--p-80 {
+    padding: 40px 50px 0px 60px;
+  }
+
+  .section-header-flex {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .section-header--p-500{
+    padding: 0px 50px 80px;
+  }
+
+  .card-information{
+    width: 250px;
+  }
+.estadisticas .item {
+  display: flex;
+  flex-direction: column;  /* Organiza los elementos de forma vertical */
+  align-items: center;     /* Centra todos los elementos horizontalmente */
+  text-align: center;      /* Alinea el texto en el centro */
+  max-width: 190px;
+  height: 100%;            /* Hace que la altura ocupe todo el contenedor disponible */
+  justify-content: center; /* Centra los elementos verticalmente dentro del contenedor */
+  gap: 10px;               /* Espacio entre la imagen, título y párrafo */
+}
+.estadisticas .item img {
+  width: 30px;
+  height: 30px;
+}
+
+.estadisticas .item h3 {
+  font-size: 35px;
+   margin: 0;  
+}
+
+.estadisticas .item p {
+  font-size: 14px;
+   margin: 0;  
+}
+
+  .icon {
+    position: absolute;
+    right: 20px;
+    bottom: 290px;
+    height: 150px;
+    width: 150px;
+  }
+
+  .section-grid {
+    padding: 10px 100px;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-2, .grid-4, .card-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .section-header p, .faq-column, .section-card {
+    max-width: 100%;
+  }
+
+  .faq-columns {
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .section-text.centered {
+    padding: 50px 100px 0px;
+    
+  }
+  .section-header-clientes {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  .experiencia-icon {
+    width: 280px;  /* tamaño aún más pequeño */
+    height: 300px;
+  }
+  .custom.custom-back {
+    width: 220px;
+  }
+
+  .custom-shape.custom-front {
+    width: 220px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header-container {
+    height: 300px;
+    background-position: center center;
+  }
+
+  .imagen-mascara{
+    display: none;
+  }
+
+  .yellow {
+    font-size: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+    max-width: 230px;
+
+  }
+
+  p {
+    font-size: 11px;
+  }
+
+  .linea-decorativa-total {
+    left: 30px;
+  }
+
+  .header-overlay {
+    padding: 0 20px;
+  }
+
+  .header-overlay p {
+    max-width: 190px;
+  }
+
+  .section-header--p-80 {
+    padding: 40px 50px 0px 60px;
+  }
+
+  .circle-line {
+    height: 15px;
+    width: 15px;
+    left: 24px;
+  }
+
+  .section-header-flex {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .icon,
+  .icon-green,
+  .custom-shape.custom-front-2 {
+    display: none;
+  }
+
+  .section-grid {
+    padding: 10px 60px;
+    gap: 5px;
+  }
+
+  .grid-3, .grid-2, .grid-4, .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 30px;
+  }
+
+  .card.new img {
+    height: 200px;
+  }
+
+  .section-card {
+    max-width: 100%;
+  }
+
+  .section-header p {
+    max-width: 100%;
+  }
+
+  .faq-column details {
+    min-width: 300px;
+  }
+
+  .faq-columns {
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .section-grid.centered {
+    padding: 0px 90px 80px 90px;
+  }
+
+  .section-text.centered {
+    padding: 40px 50px;
+  }
+
+  .card-pair {
+    display: grid;
+  }
+
+  .faq-column summary {
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 12px;
+    margin: 1rem auto 1rem 10px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  .container {
+    margin-top: 0px;
+  }
+
+  .card-text h3 {
+    font-size: 15px;
+  }
+
+  .card-text p {
+    font-size: 11px;
+  }
+
+  .card h3 {
+    font-size: 15px;
+  }
+
+  .card p {
+    font-size: 11px;
+  }
+
+  .card img {
+    height: 25px;
+  }
+
+  .section-card h3 {
+    font-size: 15px;
+  }
+
+  .section-card p {
+    font-size: 11px;
+  }
+
+  .icon-line {
+    height: 35px;
+    left: 15px;
+    top: 130px;
+    width: 35px;
+  }
+}

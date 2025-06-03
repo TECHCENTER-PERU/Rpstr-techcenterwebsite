@@ -5,6 +5,7 @@ import { TrabajoModernoComponent } from './component/soluciones/trabajo-moderno/
 import { AplicacionesEmpresarialesComponent } from './component/soluciones/aplicaciones-empresariales/aplicaciones-empresariales.component';
 import { InfraestructuraComponent } from './component/soluciones/infraestructura/infraestructura.component';
 import { ServiciosComponent } from './component/servicios/servicios.component';
+import { NosotrosComponent } from './component/nosotros/nosotros.component';
 
 export const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -12,7 +13,9 @@ export const routes: Routes = [
     {path: 'trabajo-moderno', component: TrabajoModernoComponent},
     {path: 'aplicaciones-empresariales', component: AplicacionesEmpresarialesComponent},
     {path: 'infraestructura', component: InfraestructuraComponent},
-    {path: 'servicios', component: ServiciosComponent}
+    {path: 'servicios', component: ServiciosComponent},
+    {path: 'nosotros', component: NosotrosComponent}
+
 
 
 
