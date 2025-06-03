@@ -6,19 +6,19 @@
         <p><br>En TECHCENTER, estamos comprometidos a proporcionarte soluciones personalizadas y soporte continuo para que puedas enfocarte en lo que mejor haces: hacer crecer tu negocio. <br><br>No esperes más, ¡contáctanos hoy mismo para una asesoría gratuita y comienza tu viaje hacia la transformación digital.</p>
       </div>
       <div class="column">
-        <form class="formulario">
+        <form class="formulario"  [formGroup]="formulario" (ngSubmit)="handleSubmit()">
           <h4>Conversemos</h4>
-          <input type="text" id="nombre" name="nombre" placeholder="Ingresa tus nombres" required>
+          <input type="text" id="nombre" formControlName="nombre" placeholder="Ingresa tus nombres" required>
 
-          <input type="text" id="apellido" name="apellido" placeholder="Ingresa tus apellidos" required>
+          <input type="text" id="apellido" formControlName="apellidos" placeholder="Ingresa tus apellidos" required>
 
-          <input type="email" id="email" name="email" placeholder="Ingresa tu direccion e-mail" required>
+          <input type="email" id="email" formControlName="correo" placeholder="Ingresa tu direccion e-mail" required>
 
-          <input type="text" id="telefono" name="telefono" placeholder="Ingresa tu número movil" required>
+          <input type="text" id="telefono" formControlName="telefono" placeholder="Ingresa tu número movil" required>
 
-          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Ingresa tu mensaje" required></textarea>
+          <textarea id="mensaje" formControlName="descripcion" rows="4" placeholder="Ingresa tu mensaje" required></textarea>
 
-          <button type="submit">Envía tu mensaje al asesor</button>
+          <button type="submit" [disabled]="formulario.invalid">Envía tu mensaje al asesor</button>
         </form>
       </div>
     </div>
