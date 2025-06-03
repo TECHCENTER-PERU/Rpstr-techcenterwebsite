@@ -6,6 +6,7 @@ import { AplicacionesEmpresarialesComponent } from './component/soluciones/aplic
 import { InfraestructuraComponent } from './component/soluciones/infraestructura/infraestructura.component';
 import { ServiciosComponent } from './component/servicios/servicios.component';
 import { NosotrosComponent } from './component/nosotros/nosotros.component';
+import { ContactoComponent } from './component/contacto/contacto.component';
 
 export const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -14,7 +15,9 @@ export const routes: Routes = [
     {path: 'aplicaciones-empresariales', component: AplicacionesEmpresarialesComponent},
     {path: 'infraestructura', component: InfraestructuraComponent},
     {path: 'servicios', component: ServiciosComponent},
-    {path: 'nosotros', component: NosotrosComponent}
+    {path: 'nosotros', component: NosotrosComponent},
+    {path: 'contacto', component: ContactoComponent}
+
 
 
 
