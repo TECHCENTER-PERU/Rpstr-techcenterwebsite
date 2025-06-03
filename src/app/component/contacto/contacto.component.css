@@ -1,0 +1,309 @@
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 350px; /* Altura coherente */
+  text-align: center;
+}
+
+.title {
+  margin-top: 100px;
+  font-size: 80px;
+  color: #3171DE;
+}
+
+h3{
+    text-align: center;
+}
+
+.subtitle {
+  max-width: 900px;
+  font-size: 40px;
+  margin-top: 40px;
+  color: #525252;
+  margin-bottom: 40px;
+}
+
+/* Contenedor principal de secciones */
+.main-container {
+  display: grid; /* Usamos Grid en lugar de Flexbox */
+  gap: 40px; /* Espacio entre las dos secciones */
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas con el mismo tamaño */
+  justify-items: stretch; /* Las secciones ocuparán todo el ancho disponible */
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Sección contenedora */
+.section-container {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0; /* El padding se manejará con .section-header */
+}
+
+/* Estilos de las secciones */
+.section-container--pt-80 {
+  padding-top: 80px;
+  position: relative;
+}
+
+.section-header {
+  display: grid;
+  gap: 20px;
+}
+
+.section-header--p-80 {
+  padding: 60px 200px;
+}
+
+.section-header--mw-600 p {
+  max-width: 600px;
+}
+
+/* Grid para las imágenes */
+.section-grid {
+  display: grid;
+  padding: 40px 90px 80px 90px;
+  gap: 48px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow-x: hidden;
+  justify-items: center; /* Centra las imágenes dentro de las celdas */
+}
+
+.section-grid img {
+  width: 100%;
+  max-width: 70px;
+  max-height: 70px;
+  object-fit: contain;
+}
+
+.section-grid > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 2000px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1000px;
+}
+
+/* Card Information */
+.card-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 820px; /* Para evitar que sea más ancho que el contenido */
+  height: 150px;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05);
+  z-index: 2;
+}
+
+.card-information p {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  z-index: 2;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+  max-width: 600px;
+}
+
+.card img {
+  height: 30px;
+  margin-bottom: 16px;
+  display: block;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 70px;
+    margin-top: 70px;
+  }
+
+  .subtitle {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+
+  .section-grid {
+    padding: 30px 20px;
+  }
+
+  .section-grid img {
+    max-width: 60px;
+    max-height: 60px;
+  }
+
+  .card-information {
+    max-width: 90%;
+    height: 130px;
+    padding: 20px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 50px;
+    margin-top: 50px;
+  }
+
+  .subtitle {
+    font-size: 25px;
+    margin-top: 20px;
+  }
+
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+
+  .section-grid {
+    padding: 30px 15px;
+  }
+
+  .section-grid img {
+    max-width: 50px;
+    max-height: 50px;
+  }
+
+  .card-information {
+    max-width: 90%;
+    height: 120px;
+    padding: 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    height: 0px;
+        margin-top: 100px;
+        margin-bottom: 80px;
+
+  }
+
+  .section-container--pt-80 {
+    padding-top: 0px;
+  }
+
+  .section-header--p-80 {
+    padding: 60px 30px;
+  }
+
+  .section-grid > * {
+    width: 180px;
+  }
+
+  .title {
+    font-size: 35px;
+    margin-top: 20px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    margin-top: 15px;
+    max-width: 90%;
+  }
+
+  .main-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .section-grid {
+    padding: 15px 5px;
+    gap: 20px;
+  }
+
+  .section-grid img {
+    max-width: 50px;
+    max-height: 50px;
+  }
+
+  .card-information {
+    max-width: 100%;
+    height: auto;
+    padding: 15px;
+    margin-top: 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 11px;
+  }
+}
