@@ -10,7 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
   standalone: true,
   imports: [ReactiveFormsModule, HttpClientModule],
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  styleUrl: './footer.component.css'
 })
 export class FooterComponent {
 
