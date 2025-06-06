@@ -1,29 +1,55 @@
 import { Component } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-
-interface FormData {
-  nombre: string;
-  apellidos: string;
-  correo: string;
-  telefono: string;
-  descripcion: string;
-}
-
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-footer',
-  imports: [ReactiveFormsModule],
+  standalone: true,
+  imports: [ReactiveFormsModule, HttpClientModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
 
-  // Crear el formulario reactivo
-  formulario: FormGroup;
 
-  constructor() {
-    // Inicializar el formulario
+  // formulario: FormGroup;
+
+  // constructor(private http: HttpClient) {
+  //   this.formulario = new FormGroup({
+  //     nombre: new FormControl('', [Validators.required]),
+  //     apellidos: new FormControl('', [Validators.required]),
+  //     correo: new FormControl('', [Validators.required, Validators.email]),
+  //     telefono: new FormControl('', [Validators.required]),
+  //     descripcion: new FormControl('', [Validators.required]),
+  //   });
+  // }
+
+  // onSubmit() {
+  //   if (this.formulario.valid) {
+  //     const formData = this.formulario.value;
+
+  //     this.sendEmail(formData).subscribe(
+  //       response => {
+  //         console.log('Correo enviado con éxito:', response);
+  //         alert('Tu mensaje fue enviado con éxito');
+  //         this.formulario.reset();
+  //       },
+  //       error => {
+  //         console.error('Error al enviar correo:', error);
+  //         alert('Hubo un error al enviar tu mensaje, intenta de nuevo más tarde');
+  //       }
+  //     );
+  //   } else {
+  //     alert('Por favor, completa todos los campos correctamente');
+  //   }
+  // }
+
+    formulario: FormGroup;
+
+  constructor(private http: HttpClient) {
     this.formulario = new FormGroup({
       nombre: new FormControl('', [Validators.required]),
       apellidos: new FormControl('', [Validators.required]),
@@ -33,27 +59,35 @@ export class FooterComponent {
     });
   }
 
-  // Función para enviar los datos al Webhook
-  sendDataToWebhook(data: FormData): void {
-    fetch('https://prod-22.brazilsouth.logic.azure.com:443/workflows/8805143ea814475bb569639c06e8519a/triggers/manual/paths/invoke?api-version=2016-06-01', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(data => console.log('Éxito:', data))
-    .catch(error => console.error('Error:', error));
+  onSubmit() {
+    if (this.formulario.valid) {
+      const formData = this.formulario.value;
+
+      // Transformar los datos a los campos requeridos por Azure Function
+      const emailPayload = {
+        name: formData.nombre,
+        email: formData.correo,
+        message: formData.descripcion
+      };
+
+      this.sendEmail(emailPayload).subscribe(
+        response => {
+          console.log('📧 Correo enviado con éxito:', response);
+          alert('Tu mensaje fue enviado con éxito');
+          this.formulario.reset();
+        },
+        error => {
+          console.error('❌ Error al enviar correo:', error);
+          alert('Hubo un error al enviar tu mensaje, intenta de nuevo más tarde');
+        }
+      );
+    } else {
+      alert('Por favor, completa todos los campos correctamente');
+    }
   }
 
-  // Función para manejar el envío del formulario
-  handleSubmit(): void {
-    if (this.formulario.valid) {
-      const formData: FormData = this.formulario.value;
-      this.sendDataToWebhook(formData);
-    } else {
-      console.error('Formulario no válido');
-    }
+  sendEmail(data: any): Observable<any> {
+    const apiUrl = 'https://webtcformulario.azurewebsites.net/api/SendEmail?'; // Cambia esto a la URL de tu función de Azure
+    return this.http.post(apiUrl, data);
   }
 }
