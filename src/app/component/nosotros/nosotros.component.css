@@ -354,8 +354,8 @@
 .custom-shape.custom-front {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 450px;
+  left: 75px;
+  width: 350px;
   height: auto;
   clip-path: polygon(53% 0, 100% 0, 100% 50%, 50% 100%, 0 100%, 0 50%);
   border-radius: 40px;
