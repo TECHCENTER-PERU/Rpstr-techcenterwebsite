@@ -23,6 +23,7 @@ export class FooterComponent {
       correo: new FormControl('', [Validators.required, Validators.email]),
       telefono: new FormControl('', [Validators.required]),
       descripcion: new FormControl('', [Validators.required]),
+      captchaToken: new FormControl(''),
     });
   }
 
