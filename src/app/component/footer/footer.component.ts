@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, NgZone } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
@@ -17,7 +17,7 @@ export class FooterComponent implements AfterViewInit {
   captchaWidgetId!: number;
   formulario: FormGroup;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private zone: NgZone) {
     this.formulario = new FormGroup({
       nombre: new FormControl('', [Validators.required]),
       apellidos: new FormControl('', [Validators.required]),
@@ -26,16 +26,21 @@ export class FooterComponent implements AfterViewInit {
       descripcion: new FormControl('', [Validators.required]),
     });
 
-    // Definimos la función global que Google llamará cuando cargue reCAPTCHA
-    (window as any).onRecaptchaLoadCallback = () => {
-      this.captchaWidgetId = (window as any).grecaptcha.render('recaptcha-element', {
-        sitekey: '6LcLIWQrAAAAABb40Lz0V7owDZFFpLeDoxzU7EtK'
+    // Expone la función de renderizado para que el archivo externo la pueda usar
+    (window as any).recaptchaRenderCallback = () => {
+      this.zone.run(() => {
+        this.captchaWidgetId = (window as any).grecaptcha.render('recaptcha-element', {
+          sitekey: '6LcLIWQrAAAAABb40Lz0V7owDZFFpLeDoxzU7EtK'
+        });
       });
     };
+
+    // Expone la zona de Angular para que el archivo externo pueda usarla
+    (window as any).ngZoneRef = this.zone;
   }
 
   ngAfterViewInit() {
-    // Ya no renderizamos aquí, esperamos al callback global
+    // Nada que hacer aquí; la renderización ocurre vía callback externo
   }
 
   onSubmit() {
@@ -64,7 +69,7 @@ export class FooterComponent implements AfterViewInit {
           console.log('📧 Correo enviado con éxito:', response);
           alert('Tu mensaje fue enviado con éxito');
           this.formulario.reset();
-          (window as any).grecaptcha.reset(this.captchaWidgetId); // Reset con ID explícito
+          (window as any).grecaptcha.reset(this.captchaWidgetId);
         },
         error => {
           console.error('❌ Error al enviar correo:', error);
