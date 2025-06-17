@@ -1,0 +1,11 @@
+<app-navbar-color></app-navbar-color>
+
+<div class="terminos-container">
+  <h1>Política de Privacidad</h1>
+
+    <section *ngFor="let item of terminos">
+    <h2>{{ item.titulo }}</h2>
+    <div class="contenido-html" [innerHTML]="item.contenido"></div>
+    </section>
+</div>
+<app-footer></app-footer>
