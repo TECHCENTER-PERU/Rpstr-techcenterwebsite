@@ -30,7 +30,7 @@ export class FooterComponent implements AfterViewInit {
     (window as any).recaptchaRenderCallback = () => {
       this.zone.run(() => {
         this.captchaWidgetId = (window as any).grecaptcha.render('recaptcha-element', {
-          sitekey: '6LcLIWQrAAAAABb40Lz0V7owDZFFpLeDoxzU7EtK'
+          sitekey: '6LfQdWQrAAAAANdBB6E0Jr2N5GZp7EAsIhRY9yC_'
         });
       });
     };
