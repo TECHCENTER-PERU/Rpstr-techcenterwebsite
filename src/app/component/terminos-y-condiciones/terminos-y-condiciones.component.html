@@ -1,0 +1,17 @@
+<app-navbar-color></app-navbar-color>
+
+<div class="terminos-container">
+  <h1>Términos y Condiciones</h1>
+  <p class="actualizado">Actualizado el 11/10/2024</p>
+
+    <section *ngFor="let item of terminos">
+    <h2>{{ item.titulo }}</h2>
+    <div class="contenido-html" [innerHTML]="item.contenido"></div>
+    </section>
+
+
+  <div class="acciones">
+    <button (click)="descargarPDF()">Descargar PDF</button>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,60 @@
+.terminos-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.terminos-container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.actualizado {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+section h2 {
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.acciones {
+  text-align: right;
+  margin-top: 40px;
+}
+
+.acciones button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #0a74da;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.acciones button:hover {
+  background-color: #084e8a;
+}
+
+/* Aplica estilos solo al contenido renderizado por innerHTML */
+.contenido-html ul {
+  padding-left: 100px;
+  margin-bottom: 1rem;
+  list-style-type: disc;
+}
+
+.contenido-html li {
+  margin-bottom: 0.5rem;
+}

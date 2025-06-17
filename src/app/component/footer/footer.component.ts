@@ -4,11 +4,13 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [ReactiveFormsModule, HttpClientModule],
+  imports: [ReactiveFormsModule, HttpClientModule,RouterModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })

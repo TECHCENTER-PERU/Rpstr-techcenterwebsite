@@ -7,6 +7,8 @@ import { InfraestructuraComponent } from './component/soluciones/infraestructura
 import { ServiciosComponent } from './component/servicios/servicios.component';
 import { NosotrosComponent } from './component/nosotros/nosotros.component';
 import { ContactoComponent } from './component/contacto/contacto.component';
+import { TerminosYCondicionesComponent } from './component/terminos-y-condiciones/terminos-y-condiciones.component';
+import { PoliticaPrivacidadComponent } from './component/politica-privacidad/politica-privacidad.component';
 
 export const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -15,11 +17,8 @@ export const routes: Routes = [
     {path: 'soluciones-microsoft-cloud/aplicaciones-empresariales', component: AplicacionesEmpresarialesComponent},
     {path: 'soluciones-microsoft-cloud/infraestructura-microsoft-cloud', component: InfraestructuraComponent},
     {path: 'servicios-microsoft-cloud-transformacion-digital', component: ServiciosComponent},
-    {path: 'innovacion-digital-empresas', component: NosotrosComponent},
-    {path: 'transformacion-digital-e-innovacion', component: ContactoComponent}
-
-
-
-
-
+    {path: 'nosotros', component: NosotrosComponent},
+    {path: 'contacto', component: ContactoComponent},
+    {path: 'terminos-y-condiciones', component: TerminosYCondicionesComponent},
+    {path: 'politicas-de-privacidad', component: PoliticaPrivacidadComponent},
 ];
