@@ -18,7 +18,7 @@
 
           <textarea id="mensaje" formControlName="descripcion" rows="4" placeholder="Ingresa tu mensaje" required></textarea>
           
-          <div id="recaptcha-element"></div>
+          <input type="hidden" formControlName="captchaToken" id="captchaToken">
           
           <button type="submit" [disabled]="formulario.invalid">Envía tu mensaje al asesor</button>
         </form>
