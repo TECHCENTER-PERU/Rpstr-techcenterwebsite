@@ -9,6 +9,7 @@ import { NosotrosComponent } from './component/nosotros/nosotros.component';
 import { ContactoComponent } from './component/contacto/contacto.component';
 import { TerminosYCondicionesComponent } from './component/terminos-y-condiciones/terminos-y-condiciones.component';
 import { PoliticaPrivacidadComponent } from './component/politica-privacidad/politica-privacidad.component';
+import { PoliticaCookiesComponent } from './component/politica-cookies/politica-cookies.component';
 
 export const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -21,4 +22,5 @@ export const routes: Routes = [
     {path: 'contacto', component: ContactoComponent},
     {path: 'terminos-y-condiciones', component: TerminosYCondicionesComponent},
     {path: 'politicas-de-privacidad', component: PoliticaPrivacidadComponent},
+    {path: 'politicas-de-cookies', component: PoliticaCookiesComponent},
 ];

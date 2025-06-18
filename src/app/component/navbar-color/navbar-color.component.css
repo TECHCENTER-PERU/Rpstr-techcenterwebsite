@@ -4,29 +4,30 @@ nav {
     background: transparent;
     z-index: 10;
     padding: 20px 40px;
-  }
-  
-  .navbar-wrapper {
+}
+
+.navbar-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-  }
-  .navbar-top {
+}
+
+.navbar-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-  }
-  
-  /* Logo */
-  .logo img {
+}
+
+/* Logo */
+.logo img {
     height: 50px;
     object-fit: contain;
-  }
-  
-  /* Menú central */
-  .menu-central {
+}
+
+/* Menú central */
+.menu-central {
     background-color: #F7F7FD;
     border-radius: 40px;
     display: flex;
@@ -38,83 +39,132 @@ nav {
     max-width: 1000px;
     box-sizing: border-box;
     overflow: visible;
-  }
-  
-  .menu-central a {
+}
+
+.menu-central a {
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
     transition: color 0.3s;
-  }
-  
-  .menu-central a:hover {
+}
+
+.menu-central a:hover {
     color: #0078D7;
-  }
-  
-  .menu-item {
+}
+
+.menu-item {
     position: relative;
-  }
-  
-  .menu-item a img {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.menu-item a {
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+}
+
+.menu-item a img {
     height: 8px;
     width: auto;
     margin-left: 6px;
     vertical-align: middle;
-  }
-  
-  /* Submenu estilos */
-  .submenu {
+}
+
+.submenu-toggle {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.submenu-toggle img {
+    height: 8px;
+    width: auto;
+    vertical-align: middle;
+}
+
+/* Submenu estilos */
+.submenu {
     position: absolute;
     top: 100%;
     left: 0;
+    right: auto !important; /* Forzar que no se abra hacia la derecha */
     background-color: rgba(0, 0, 0, 0.9);
     padding: 10px 0;
     display: none;
     flex-direction: column;
     min-width: 200px;
     border-radius: 4px;
-  }
+    z-index: 20; /* Asegura que el submenu quede encima */
+}
 
-  .submenu a {
+.submenu a {
     padding: 8px 20px;
     white-space: nowrap;
     color: white;
     font-size: 12px;
-  }
-  
-  .submenu a:hover {
+}
+
+.submenu a:hover {
     background-color: #222;
     color: #0078D7;
-  }
-  
-  /* Desktop: mostrar submenu con hover */
-  @media (min-width: 992px) {
-    .menu-item:hover .submenu {
-      display: flex;
-    }
-  }
-  
-  /* Móvil: mostrar submenu solo con clase show */
-  @media (max-width: 991px) {
-    .submenu.show {
-      display: flex !important;
-      flex-direction: column;
-      position: static;
-      background-color: transparent;
-      padding: 0;
-      min-width: auto;
-    }
-  }
-  
-  /* Botón derecho */
-  .boton-derecho {
-    flex-shrink: 0;
-  }
-  
-  .btn-nav {
-    background-color: #66B066;
+}
 
+/* Desktop: mostrar submenu con hover */
+@media (min-width: 992px) {
+    .menu-item:hover .submenu {
+        display: flex;
+    }
+}
+
+@media (max-width: 414px) {
+      .menu-item{
+        display: grid;
+    }
+}
+
+
+
+/* Móvil: mostrar submenu solo con clase show */
+@media (max-width: 991px) {
+    .submenu.show {
+        display: flex !important;
+        flex-direction: column;
+        position: static;
+        background-color: transparent;
+        padding: 0;
+        min-width: auto;
+    }
+    
+    /* Submenu letras negras en móvil */
+    .submenu.show a {
+        color: black;
+    }
+
+    /* Alinear texto de menú hamburguesa a la derecha y centrar verticalmente */
+    .menu-central a,
+    .submenu.show a {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+        color: black;
+    }
+}
+
+/* Botón derecho */
+.boton-derecho {
+    flex-shrink: 0;
+}
+
+.btn-nav {
+    background-color: #66B066;
     border: 2px solid white;
     color: white !important;
     padding: 10px 16px;
@@ -122,60 +172,57 @@ nav {
     font-weight: 600;
     text-decoration: none;
     transition: background 0.3s;
-     align-items: center; 
+    align-items: center; 
     gap: 8px;
-  }
-  
-  .btn-nav img {
+}
+
+.btn-nav img {
     height: 30px;
     vertical-align: middle;
-  }
-  
-  .btn-nav:hover {
+}
+
+.btn-nav:hover {
     background-color: #538f53;
-  }
-  
-  
-  /* Hamburguesa */
-  .hamburger {
+}
+
+/* Hamburguesa */
+.hamburger {
     display: none;
     font-size: 28px;
     color: rgb(0, 0, 0);
     cursor: pointer;
     margin-left: 20px;
-  }
-  
-  @media (max-width: 1024px) {
+}
+
+@media (max-width: 1024px) {
     .boton-derecho {
-      display: none;
+        display: none;
     }
-    /* otros estilos... */
-  }
-  
-  /* ============ Responsive ============ */
-  @media (max-width: 991px) {
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 991px) {
     .menu-central {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      gap: 20px;
-      background-color: #F7F7FD;
-      padding: 20px;
-      margin-top: 10px;
-      border-radius: 10px;
-      order: 3;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        background-color: #F7F7FD;
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 10px;
+        order: 3;
     }
-  
+
     .menu-central.show {
-      display: flex;
+        display: flex;
     }
-  
+
     .boton-derecho {
-      display: none;
+        display: none;
     }
-  
+
     .hamburger {
-      display: block;
+        display: block;
     }
-  }
-  
+}

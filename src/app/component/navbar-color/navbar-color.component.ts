@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+
 @Component({
   selector: 'app-navbar-color',
   imports: [CommonModule, RouterModule],
@@ -8,24 +9,22 @@ import { RouterModule } from '@angular/router';
   styleUrl: './navbar-color.component.css'
 })
 export class NavbarColorComponent {
+
   isMenuOpen = false;
-  submenuOpen = false;
+  submenuOpen: string | null = null;
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
-    if (!this.isMenuOpen) {
-      this.submenuOpen = false; // cerrar submenu cuando cierro menú general
-    }
   }
 
-  toggleSubmenu(event: Event) {
+  toggleSubmenu(event: Event, menu: string) {
     event.preventDefault();
-    event.stopPropagation(); // evita que el click burbujee y cierre menú general
-    this.submenuOpen = !this.submenuOpen;
+    event.stopPropagation();
+    this.submenuOpen = this.submenuOpen === menu ? null : menu;
   }
 
   closeMenu() {
     this.isMenuOpen = false;
-    this.submenuOpen = false;
+    this.submenuOpen = null;
   }
 }
