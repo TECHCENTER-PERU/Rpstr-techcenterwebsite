@@ -17,7 +17,9 @@
           <input type="text" id="telefono" formControlName="telefono" placeholder="Ingresa tu número movil" required>
 
           <textarea id="mensaje" formControlName="descripcion" rows="4" placeholder="Ingresa tu mensaje" required></textarea>
-
+          
+          <input type="hidden" formControlName="captchaToken" id="captchaToken">
+          
           <button type="submit" [disabled]="formulario.invalid">Envía tu mensaje al asesor</button>
         </form>
       </div>
