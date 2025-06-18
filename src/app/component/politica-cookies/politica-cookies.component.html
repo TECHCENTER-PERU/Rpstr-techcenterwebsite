@@ -1,1 +1,12 @@
-<p>politica-cookies works!</p>
+<app-navbar-color></app-navbar-color>
+
+<div class="terminos-container">
+  <h1>Política de cookies (UE)</h1>
+  <p class="actualizado">Esta política de cookies fue actualizada por última vez el 11/10/2024 y se aplica a los ciudadanos y residentes legales permanentes del Espacio Económico Europeo y Suiza.</p>
+
+    <section *ngFor="let item of terminos">
+    <h2>{{ item.titulo }}</h2>
+    <div class="contenido-html" [innerHTML]="item.contenido"></div>
+    </section>
+</div>
+<app-footer></app-footer>

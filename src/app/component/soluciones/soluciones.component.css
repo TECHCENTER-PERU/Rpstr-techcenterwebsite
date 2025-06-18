@@ -20,6 +20,10 @@
   position: relative;
 }
 
+.titulo{
+  margin-left: 80px;
+}
+
 .faq-column details[open],
 .faq details[open] {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
@@ -400,7 +404,7 @@ button {
 }
 
 .section-container.izquierda .custom-shape {
-  grid-column: 1;
+  grid-column: 1; 
 }
 
 .section-container.izquierda .custom-shape.custom-front-2 {
@@ -437,11 +441,12 @@ button {
   z-index: 3;
 }
 
-.section-container.izquierda .section-header {
+ .section-container.izquierda .section-header {
   grid-template-columns: 1fr 1fr;
-}
+} 
 
 .section-container.izquierda .section-header span,
+.section-container.izquierda .section-header .izquierda_2,
 .section-container.izquierda .section-header p,
 .section-container.izquierda .section-header button,
 .section-container.izquierda .section-header .icon,
@@ -461,6 +466,7 @@ button {
 
 .section-header span,
 .section-header p,
+.section-header h2,
 .section-header button,
 .section-header .icon,
 .section-header .icon-green {

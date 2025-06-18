@@ -1,47 +1,56 @@
 <nav>
-    <div class="navbar-wrapper">
-      <div class="logo">
-        <a [routerLink]="'/'">
-          <img src="assets/img/Logo.png" alt="Logo" />
+  <div class="navbar-wrapper">
+    <div class="logo">
+      <a [routerLink]="'/'">
+        <img src="assets/img/Logo.png" alt="Logo" />
+      </a>
+    </div>
+
+    <div class="menu-central" [ngClass]="{ 'show': isMenuOpen }">
+
+      <!-- Menú Soluciones -->
+      <div class="menu-item">
+        <a [routerLink]="'/soluciones-microsoft-cloud'" (click)="closeMenu()">
+          Soluciones
         </a>
+        <button class="submenu-toggle" (click)="toggleSubmenu($event, 'soluciones')" aria-label="Toggle submenu">
+          <img src="assets/img/iconos/abajo-black.png" alt="Flecha Abajo" />
+        </button>
+        <div class="submenu" [ngClass]="{ 'show': submenuOpen === 'soluciones' }">
+          <a [routerLink]="'/soluciones-microsoft-cloud/trabajo-moderno-soluciones-microsoft-cloud'" (click)="closeMenu()">Trabajo Moderno</a>
+          <a [routerLink]="'/soluciones-microsoft-cloud/aplicaciones-empresariales'" (click)="closeMenu()">Aplicaciones Empresariales</a>
+          <a [routerLink]="'/soluciones-microsoft-cloud/infraestructura-microsoft-cloud'" (click)="closeMenu()">Infraestructura</a>
+        </div>
       </div>
 
-    
-        <div class="menu-central" [ngClass]="{ 'show': isMenuOpen }">
-          <div class="menu-item">
-            <a [routerLink]="'/soluciones-microsoft-cloud'" (click)="toggleSubmenu($event)">
-              Soluciones <img src="assets/img/iconos/abajo-black.png" alt="Flecha Abajo" />
-            </a>
-            <div class="submenu" [ngClass]="{ 'show': submenuOpen }">
-              <a [routerLink]="'/soluciones-microsoft-cloud/trabajo-moderno-soluciones-microsoft-cloud'" (click)="closeMenu()">Trabajo Moderno</a>
-              <a [routerLink]="'/soluciones-microsoft-cloud/aplicaciones-empresariales'" (click)="closeMenu()">Aplicaciones Empresariales</a>
-              <a [routerLink]="'/soluciones-microsoft-cloud/infraestructura-microsoft-cloud'" (click)="closeMenu()">Infraestructura</a>
-            </div>
-          </div>
-    
-          <a [routerLink]="'/servicios-microsoft-cloud-transformacion-digital'" (click)="closeMenu()">Servicios</a>
-          <a [routerLink]="'/innovacion-digital-empresas'" (click)="closeMenu()">Nosotros</a>
-          <div class="menu-item">
-            <a  (click)="toggleSubmenu($event)">
-              Recursos <img src="assets/img/iconos/abajo-black.png" alt="Flecha Abajo" />
-            </a>
-            <div class="submenu" [ngClass]="{ 'show': submenuOpen }">
-              <a href="https://techcenterperu.com/transformacion-digital-microsoft-soluciones/" (click)="closeMenu()">Blog</a>
-              <a href="https://engage.cloud.microsoft/main/org/techcenterperu.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIyMDgyNjA2NDQ4NjQifQ" (click)="closeMenu()">Comunidad Conecta Lite</a>
-              <a href="https://engage.cloud.microsoft/main/org/techcenterperu.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIyMDc4NjUzODA4NjQifQ/all" (click)="closeMenu()">Comunidad Conecta 360</a>
-              <a href="https://techcenter-clientes.powerappsportals.com/" (click)="closeMenu()">Centro de Soporte</a>
-            </div>
-          </div>
-          <a [routerLink]="'/transformacion-digital-e-innovacion'" (click)="closeMenu()">Contacto</a>
+      <a [routerLink]="'/servicios-microsoft-cloud-transformacion-digital'" (click)="closeMenu()">Servicios</a>
+      <a [routerLink]="'/nosotros'" (click)="closeMenu()">Nosotros</a>
+
+      <!-- Menú Recursos -->
+      <div class="menu-item">
+        <a [routerLink]="'/recursos'" (click)="closeMenu()">
+          Recursos
+        </a>
+        <button class="submenu-toggle" (click)="toggleSubmenu($event, 'recursos')" aria-label="Toggle submenu">
+          <img src="assets/img/iconos/abajo-black.png" alt="Flecha Abajo" />
+        </button>
+        <div class="submenu" [ngClass]="{ 'show': submenuOpen === 'recursos' }">
+          <a href="https://techcenterperu.com/transformacion-digital-microsoft-soluciones/" (click)="closeMenu()">Blog</a>
+          <a href="https://engage.cloud.microsoft/main/org/techcenterperu.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIyMDgyNjA2NDQ4NjQifQ" (click)="closeMenu()">Comunidad Conecta Lite</a>
+          <a href="https://engage.cloud.microsoft/main/org/techcenterperu.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIyMDc4NjUzODA4NjQifQ/all" (click)="closeMenu()">Comunidad Conecta 360</a>
+          <a href="https://techcenter-clientes.powerappsportals.com/" (click)="closeMenu()">Centro de Soporte</a>
         </div>
-    
-        <div class="boton-derecho">
-          <a class="btn-nav" href="#">
-            <img src="assets/img/iconos/whatsapp.png" alt="Whatsapp" /> +51 950 963 557
-          </a>
-        </div>
-    
-        <div class="hamburger" (click)="toggleMenu()">&#9776;</div>
+      </div>
+
+      <a [routerLink]="'/contacto'" (click)="closeMenu()">Contacto</a>
     </div>
-  </nav>
-  
+
+    <div class="boton-derecho">
+      <a class="btn-nav" href="#">
+        <img src="assets/img/iconos/whatsapp.png" alt="Whatsapp" /> +51 950 963 557
+      </a>
+    </div>
+
+    <div class="hamburger" (click)="toggleMenu()">&#9776;</div>
+  </div>
+</nav>
