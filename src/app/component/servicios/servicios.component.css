@@ -28,6 +28,7 @@
   font-family: 'Poppins-Regular';
   font-size: 18px;
   font-weight: bold;
+  font-display: swap;
   text-transform: uppercase;
 }
 .yellow {
@@ -405,6 +406,7 @@ h4{
 .faq summary {
   font-family: 'Poppins-Regular';
   font-weight: bold;
+  font-display: swap;
   font-size: 14px;
   cursor: pointer;
   position: relative;
