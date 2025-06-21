@@ -128,7 +128,6 @@
 }
 
 .card img {
-  height: 30px; 
   margin-bottom: 16px;
   display: block;
   margin-right: auto;
@@ -487,14 +486,13 @@ app-navbar {
 
   .carousel-item {
     flex: 0 0 auto;
-    width: 120px; /* o ajusta según necesidad */
+    width: 120px; 
     height: 60px;
     scroll-snap-align: start;
     box-sizing: border-box;
   }
   .carousel-item img {
-    max-width: 100%;
-    height: auto;
+
     object-fit: contain;
     display: block;
   }
