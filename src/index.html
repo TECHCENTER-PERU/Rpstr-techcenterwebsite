@@ -7,10 +7,19 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="assets/img/icono.png">
-  <script src="https://www.google.com/recaptcha/api.js?render=6LfQdWQrAAAAANdBB6E0Jr2N5GZp7EAsIhRY9yC_"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2MMLR4XCFG"></script>
-  <script>   window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-2MMLR4XCFG'); </script>
 
+  <!-- Cargar reCAPTCHA de forma diferida -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfQdWQrAAAAANdBB6E0Jr2N5GZp7EAsIhRY9yC_" defer></script>
+
+  <!-- Cargar Google Analytics asíncronamente -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2MMLR4XCFG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2MMLR4XCFG');
+  </script>
+  
 </head>
 
 <body>
