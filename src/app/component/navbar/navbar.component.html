@@ -23,9 +23,9 @@
           Recursos <img src="assets/img/iconos/abajo.png" alt="Flecha Abajo" />
         </a>
         <div class="submenu" [ngClass]="{ 'show': submenuOpen }">
-          <a href="https://techcenterperu.com/transformacion-digital-microsoft-soluciones/" (click)="closeMenu()">Blog</a>
-          <a href="https://engage.cloud.microsoft/main/org/techcenterperu.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIyMDgyNjA2NDQ4NjQifQ" (click)="closeMenu()">Comunidad Conecta 360</a>
-          <a href="https://techcenter-clientes.powerappsportals.com/" (click)="closeMenu()">Centro de Soporte</a>
+          <a href="https://techcenterperu.com/transformacion-digital-microsoft-soluciones/" target="_blank" (click)="closeMenu()">Blog <img src="assets/img/iconos/external.png" class="link" alt="link-externo" /></a>
+          <a href="https://engage.cloud.microsoft/main/org/techcenterperu.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIyMDgyNjA2NDQ4NjQifQ" target="_blank" (click)="closeMenu()">Comunidad Conecta 360 <img src="assets/img/iconos/external.png" alt="link-externo" /></a>
+          <a href="https://techcenter-clientes.powerappsportals.com/" target="_blank" (click)="closeMenu()">Centro de Soporte <img src="assets/img/iconos/external.png" alt="link-externo" /></a>
         </div>
       </div>
       <a [routerLink]="'/contacto'" (click)="closeMenu()">Contacto</a>
