@@ -8,18 +8,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="assets/img/icono.png">
 
-  <!-- Cargar reCAPTCHA de forma diferida -->
-  <script src="https://www.google.com/recaptcha/api.js?render=6LfQdWQrAAAAANdBB6E0Jr2N5GZp7EAsIhRY9yC_" defer></script>
-
-  <!-- Cargar Google Analytics asíncronamente -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2MMLR4XCFG"></script>
+  <!-- Google Analytics: cargar después de window.onload -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-2MMLR4XCFG');
+    window.addEventListener('load', function () {
+      const gtagScript = document.createElement('script');
+      gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-2MMLR4XCFG';
+      gtagScript.async = true;
+      document.head.appendChild(gtagScript);
+
+      gtagScript.onload = function () {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-2MMLR4XCFG');
+      };
+    });
   </script>
-  
+
+  <!-- reCAPTCHA: cargar después de window.onload -->
+  <script>
+    window.addEventListener('load', function () {
+      const recaptchaScript = document.createElement('script');
+      recaptchaScript.src = 'https://www.google.com/recaptcha/api.js?render=6LfQdWQrAAAAANdBB6E0Jr2N5GZp7EAsIhRY9yC_';
+      recaptchaScript.defer = true;
+      document.body.appendChild(recaptchaScript);
+    });
+  </script>
+
 </head>
 
 <body>
