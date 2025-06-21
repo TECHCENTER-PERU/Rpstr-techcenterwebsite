@@ -43,6 +43,7 @@
   font-family: 'Poppins-Regular';
   font-weight: bold;
   font-size: 14px;
+  font-display: swap;
   cursor: pointer;
   position: relative;
   padding-right: 32px;
@@ -571,6 +572,7 @@ button {
   font-family: 'Poppins-Regular';
   font-size: 18px;
   font-weight: bold;
+  font-display: swap;
   text-transform: uppercase;
 }
 
