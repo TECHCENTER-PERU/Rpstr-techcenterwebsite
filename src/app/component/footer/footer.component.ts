@@ -5,11 +5,12 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [ReactiveFormsModule, HttpClientModule, RouterModule],
+  imports: [ReactiveFormsModule, HttpClientModule, RouterModule, CommonModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })
