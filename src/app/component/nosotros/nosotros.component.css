@@ -29,6 +29,7 @@
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
+  font-display: swap;
 }
 .yellow {
   color: #f9b233;
@@ -127,6 +128,8 @@
     margin-bottom: 0; /* O mantenlo si hay más elementos debajo */
     line-height: 1.6;  /* Para mejorar la legibilidad del párrafo */
     max-width: 700px;
+    font-display: swap;
+
 }
 .section-text img{
     width: 80px;
@@ -147,6 +150,7 @@
     font-family: 'Poppins-Regular';
     line-height: 1.6;  /* Para mejorar la legibilidad del párrafo */
     max-width: 600px;
+    font-display: swap;
 }
 
 
@@ -159,6 +163,7 @@
 }
 .nombre{
   font-family: 'Poppins-Bold';
+  font-display: swap;
 }
 .cargo{
     font-size: 12px;
@@ -432,6 +437,7 @@ h4{
   position: relative;
   padding-right: 32px;
   list-style: none;
+  font-display: swap;
 }
 
 .faq-column summary::-webkit-details-marker,
