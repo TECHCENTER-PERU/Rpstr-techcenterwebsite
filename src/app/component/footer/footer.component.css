@@ -118,6 +118,18 @@
   margin-right: 80px;
 }
 
+@media (max-width: 1400px) {
+
+   .section-header--p-0 {
+    padding: 40px;
+  }
+
+  .section-grid {
+    padding: 30px 40px;
+    gap: 32px;
+  }
+}
+
 @media (max-width: 1024px) {
   .section-header--p-0 {
     padding: 40px;
@@ -132,6 +144,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (max-width: 768px) {
   .section-header {
     flex-direction: column;

@@ -419,6 +419,106 @@ h4{
   z-index: 11;
 }
 
+@media screen and (max-width: 1400px) {
+  .header-container {
+    height: 700px;
+    background-position: center center; /* Asegura que la imagen esté siempre centrada */
+  }
+
+  .header-overlay {
+    padding: 0 40px;
+  }
+
+  .header-overlay p {
+    max-width: 400px;
+  }
+
+  .section-header--p-80 {
+    padding: 0px 130px;
+  }
+
+  .section-header-flex {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .icon {
+    position: absolute;
+    right: 70px;
+    bottom: 180px;
+    width: 300px;
+    height: 190px;
+  }
+
+  .icon-green {
+    position: absolute;
+    border-radius: 10px;
+    right: 365px;
+    top: 150px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .custom-shape.custom-front-2 {
+    right: 80px;
+    bottom: 190px;
+    height: 210px;
+    width: 340px;
+  }
+
+  .section-header--mw-600{
+    max-width: 815px;
+
+  }
+  .section-grid {
+    padding: 40px 100px;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card-media {
+    height: 150px;
+  }
+
+  .section-card {
+    max-width: 100%;
+  }
+
+  .section-header p {
+    max-width: 100%;
+  }
+
+
+  .section-text.centered {
+    padding: 80px 20px;
+  }
+  .container{
+    max-width: 800px;
+  }
+  button{
+    margin: 1rem auto 1rem 100px;
+  }
+}
+
 /* Estilos comunes */
 @media screen and (max-width: 1024px) {
   .header-container {

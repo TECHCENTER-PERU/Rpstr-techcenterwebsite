@@ -394,6 +394,58 @@ app-navbar {
 
 
 /* ========== Responsive: tablet (≤ 1024px) ========== */
+@media (max-width: 1400px) {
+  .section-header--p-80,
+  .section-header--p-0,
+  .section-text.centered {
+    padding: 40px 40px 0 40px;
+  }
+  
+  .section-header-clientes{
+    gap: 350px;
+  }
+  
+  .section-grid {
+    padding: 30px 40px;
+    gap: 32px;
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header-buttons {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .experiencia-icon {
+    width: 400px;
+    height: 430px;
+  }
+
+  .custom-shape.custom-front{
+    left:120px;
+  }
+
+  .section-header-clientes.section-header--p-80{
+    gap: 530px;
+  }
+
+  .custom.custom-back{
+    left:95px;
+  }
+
+  .custom.custom-back,
+  .custom-shape.custom-front {
+    width: 320px;
+  }
+}
 
 @media (max-width: 1024px) {
   .section-header--p-80,
