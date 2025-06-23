@@ -343,6 +343,7 @@
   position: relative;
   width: 554px;
   height: 600px;
+  
 }
 .custom-shape {
   grid-column: 2;
@@ -353,18 +354,22 @@
   left: 0;
   width: 450px;
   height: auto;
-  transform: translate(20%, 40%);
+  /* transform: translate(20%, 40%); */
   z-index: 0;
 }
 .custom-shape.custom-front {
   position: absolute;
   top: 0;
   left: 75px;
-  width: 350px;
-  height: auto;
-  clip-path: polygon(53% 0, 100% 0, 100% 50%, 50% 100%, 0 100%, 0 50%);
-  border-radius: 40px;
-  transform: translate(5%, 10%); /* Más arriba, menos desplazamiento vertical */
+  width: 453px;
+  height: 446px;
+  object-fit: cover; /* Ajusta la imagen para que cubra el área sin distorsionarse */
+  -webkit-mask-image: url('/assets/img/formas/forma-3.png'); /* La imagen con la máscara de transparencia */
+  mask-image: url('/assets/img/formas/forma-3.png');
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
   z-index: 1;
 }
 
@@ -482,6 +487,98 @@ h4{
   top: 130px;
   width: 55px;
   z-index: 11;
+}
+
+@media screen and (max-width: 1400px) {
+  h1{
+    max-width: 500px;
+  }
+  .card-information {
+    margin-left: 20px; 
+    margin-right: 20px;
+    margin-bottom: 30px;
+    width: 568px; 
+    max-width: 100%; 
+    height: 400px;
+  }
+
+  /* Ajustar la posición de la imagen */
+  .imagen-mascara {
+    left: 730px; /* Asegurar que la imagen esté alineada correctamente */
+    top: 150px; /* Ajustar la posición superior */
+
+  }
+  .imagen-mascara img {
+    width: 400px;
+    height: 400px;
+  }
+  .header-container {
+    height: 700px;
+    background-position: center center;
+  }
+
+  .header-overlay {
+    padding: 0 40px;
+  }
+
+  .header-overlay p {
+    max-width: 400px;
+  }
+
+  .section-header--p-80 {
+    padding: 0px 130px;
+  }
+
+  .section-header--p-500 {
+    padding: 0px 200px 80px;
+  }
+
+  .section-header-flex {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .section-grid {
+    padding: 40px 100px;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-2, .grid-4, .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .section-header p, .faq-column, .section-card {
+    max-width: 100%;
+  }
+
+
+  .section-text.centered {
+    padding: 80px 20px;
+  }
+
+  button {
+    margin: 1rem auto 1rem 100px;
+  }
+  .custom.custom-back{
+    width: 350px;
+    top: 105px;
+    left: 115px;
+    height: 354px;
+  }
+  .custom-shape.custom-front{
+    width: 350px;
+    top: 115px;
+    left: 75px;
+    height: 342px;
+  }
 }
 
 /* Estilos comunes */

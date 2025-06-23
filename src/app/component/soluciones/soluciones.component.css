@@ -594,6 +594,114 @@ button {
   position: relative;
 }
 
+@media (max-width: 1400px) {
+  .header-container {
+    height: 700px;
+    background-position: center center; /* Asegura que la imagen esté siempre centrada */
+  }
+
+  .faq-column {
+    min-width: 300px;
+    flex-basis: 48%; /* dos columnas */
+  }
+
+  .faq-column details,
+  .faq details {
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 250px;
+  }
+
+  .faq-columns {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .card {
+    width: 100%;
+    min-height: 120px;
+  }
+
+  .header-overlay {
+    padding: 0 40px;
+  }
+
+  .header-img {
+    max-width: 60%;
+  }
+
+  button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .contenido-enfoque {
+    max-width: 90%;
+  }
+
+  .cards-enfoque {
+    justify-content: space-between;
+  }
+
+  .section-container.izquierda .section-header {
+    grid-template-columns: 500px 500px !important;
+  }
+
+  .section-container.izquierda .custom-shape.custom-front-2 {
+    left: 150px;
+  } 
+
+  .section-container.izquierda .icon {
+    left: 120px;
+  }
+
+  .section-container.izquierda .icon-green {
+    left: 500px;
+  }
+
+  .custom-shape.custom-front-2{
+    right: 80px;
+  }
+
+  .section-grid {
+    display: grid;
+    gap: 30px;
+
+  }
+
+  .section-header--p-80 {
+  padding: 60px 100px;
+  }
+
+  .derecha p {
+    max-width: 470px;
+  }
+
+  .derecha button {
+    margin-left: 100px;
+  }
+
+  .header-overlay p {
+    max-width: 350px;
+  }
+
+  .custom-shape.custom-front-2 img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .icon{
+    right: 50px;
+  }
+
+  .icon-green{
+    right: 430px;
+  }
+
+
+
+}
 
 /* Estilos responsivos para Tablet */
 @media (max-width: 1024px) {

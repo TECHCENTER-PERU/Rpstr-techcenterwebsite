@@ -453,6 +453,128 @@ h4{
   align-items: center;
 }
 
+@media screen and (max-width: 1400px) {
+  .header-container {
+    height: 700px;
+    background-position: center center; /* Asegura que la imagen esté siempre centrada */
+  }
+
+  .header-overlay {
+    padding: 0 40px;
+  }
+
+  .header-overlay p {
+    max-width: 400px;
+  }
+
+  .section-header--p-80 {
+    padding: 0px 130px;
+  }
+
+  .section-header-flex {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+  .section-container.derecha .icon-green{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    right: 240px;
+    top: 50px;
+  }
+
+  .icon {
+    position: absolute;
+    right: 138px;
+    bottom: 16px;
+    width: 170px;
+    height: 190px;
+  }
+
+  .icon-green {
+    display: none;
+  }
+
+  .custom-shape.custom-front-2 {
+    right: 154px;
+    bottom: 25px;
+    height: 200px;
+    width: 200px;
+    
+  }
+
+  .section-header--mw-600{
+    max-width: 600px;
+
+  }
+  .section-grid {
+    padding: 40px 100px;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card-media {
+    height: 150px;
+  }
+
+  .section-card {
+    max-width: 100%;
+  }
+
+  .section-header p {
+    max-width: 100%;
+  }
+
+  .section-text.centered {
+    padding: 80px 20px;
+  }
+  .container{
+    max-width: 800px;
+  }
+  button{
+    margin: 1rem auto 1rem 100px;
+  }
+
+  .section-container.izquierda .custom-shape.custom-front-2{
+  top: 60px;
+  }
+  .section-container.izquierda .icon {
+  left: 200px;
+  right: auto;
+  top: 80px;
+  width: 170px;
+  height: 190px;
+  }
+  .section-container.izquierda .icon-green {
+    width: 60px;
+    height: 60px;
+    top: 60px;
+    left: 380px;
+    border-radius: 10px;
+  }
+    .section-container.derecha p {
+    max-width: 450px;
+  }
+}
 
 /* Estilos comunes */
 @media screen and (max-width: 1024px) {
