@@ -7,7 +7,7 @@
     <div class="menu-central" [ngClass]="{ 'show': isMenuOpen }">
       <div class="menu-item">
         <a [routerLink]="'/soluciones-microsoft-cloud'" (click)="toggleSubmenu($event)">
-          Soluciones <img src="assets/img/iconos/abajo.png" alt="Flecha Abajo" />
+          Soluciones <img src="assets/img/iconos/abajo.png" alt="Flecha Abajo"  width="15px" height="15px"/>
         </a>
         <div class="submenu" [ngClass]="{ 'show': submenuOpen }">
           <a [routerLink]="'/soluciones-microsoft-cloud/trabajo-moderno-soluciones-microsoft-cloud'" (click)="closeMenu()">Trabajo Moderno</a>
@@ -20,7 +20,7 @@
       <a [routerLink]="'/nosotros'" (click)="closeMenu()">Nosotros</a>
       <div class="menu-item">
         <a  (click)="toggleSubmenu($event)">
-          Recursos <img src="assets/img/iconos/abajo.png" alt="Flecha Abajo" />
+          Recursos <img src="assets/img/iconos/abajo.png" alt="Flecha Abajo" width="15px" height="15px"/>
         </a>
         <div class="submenu" [ngClass]="{ 'show': submenuOpen }">
           <a href="https://techcenterperu.com/transformacion-digital-microsoft-soluciones/" target="_blank" (click)="closeMenu()">Blog <img src="assets/img/iconos/external.png" class="link" alt="link-externo" /></a>
@@ -33,7 +33,7 @@
 
     <div class="boton-derecho">
       <a class="btn-nav" href="#" (click)="openWhatsApp()">
-        <img src="assets/img/iconos/whatsapp.png" alt="Whatsapp" /> +51 950 963 557
+        <img src="assets/img/iconos/whatsapp.png" alt="Whatsapp" height="30px" width="30px"/> +51 950 963 557
       </a>
     </div>
 
