@@ -176,7 +176,7 @@ header {
   position: relative;
   height: 150vh;
   width: 100%;
-  background: url('/assets/img/home-header.jpg') no-repeat center center / cover;
+  background: url('/assets/img/home-header.webp') no-repeat center center / cover;
   clip-path: polygon(48% 100%, 100% 86%, 100% 0, 0 0, 0 85%);
   
   display: flex;
